@@ -15,6 +15,13 @@
 		1A23E6BA215CE67200122985 /* HelloDouyuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A23E6B9215CE67200122985 /* HelloDouyuTests.swift */; };
 		1A23E6C5215CE67200122985 /* HelloDouyuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A23E6C4215CE67200122985 /* HelloDouyuUITests.swift */; };
 		1A23E6F0215D060300122985 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A23E6EF215D060300122985 /* types.plist */; };
+		1A738F39215E081B00AC8B16 /* FCATabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F38215E081B00AC8B16 /* FCATabBarController.swift */; };
+		1A738F3B215E083A00AC8B16 /* FCANavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F3A215E083A00AC8B16 /* FCANavigationController.swift */; };
+		1A738F3D215E091600AC8B16 /* FCABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F3C215E091600AC8B16 /* FCABaseViewController.swift */; };
+		1A738F3F215E0ACD00AC8B16 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F3E215E0ACD00AC8B16 /* HomeViewController.swift */; };
+		1A738F41215E0ADB00AC8B16 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F40215E0ADB00AC8B16 /* DiscoverViewController.swift */; };
+		1A738F43215E0AF900AC8B16 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F42215E0AF900AC8B16 /* MineViewController.swift */; };
+		1A738F45215E0B0400AC8B16 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F44215E0B0400AC8B16 /* RankViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		1A23E6C4215CE67200122985 /* HelloDouyuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloDouyuUITests.swift; sourceTree = "<group>"; };
 		1A23E6C6215CE67200122985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A23E6EF215D060300122985 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
+		1A738F38215E081B00AC8B16 /* FCATabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCATabBarController.swift; sourceTree = "<group>"; };
+		1A738F3A215E083A00AC8B16 /* FCANavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCANavigationController.swift; sourceTree = "<group>"; };
+		1A738F3C215E091600AC8B16 /* FCABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCABaseViewController.swift; sourceTree = "<group>"; };
+		1A738F3E215E0ACD00AC8B16 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1A738F40215E0ADB00AC8B16 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		1A738F42215E0AF900AC8B16 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		1A738F44215E0B0400AC8B16 /* RankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +151,7 @@
 		1A23E6D5215D02F700122985 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1A738F37215E06CA00AC8B16 /* Global */,
 				1A23E6D6215D02F700122985 /* Tools */,
 				1A23E6D7215D02F700122985 /* CommonUI */,
 			);
@@ -182,6 +197,7 @@
 		1A23E6DA215D02F700122985 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1A738F3E215E0ACD00AC8B16 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,6 +229,7 @@
 		1A23E6DE215D02F700122985 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1A738F40215E0ADB00AC8B16 /* DiscoverViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +261,7 @@
 		1A23E6E2215D02F700122985 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1A738F42215E0AF900AC8B16 /* MineViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,6 +293,7 @@
 		1A23E6E6215D02F700122985 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1A738F3C215E091600AC8B16 /* FCABaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -306,6 +325,7 @@
 		1A23E6EA215D02F700122985 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1A738F44215E0B0400AC8B16 /* RankViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -340,8 +360,17 @@
 			isa = PBXGroup;
 			children = (
 				1A23E6A4215CE67000122985 /* AppDelegate.swift */,
+				1A738F38215E081B00AC8B16 /* FCATabBarController.swift */,
+				1A738F3A215E083A00AC8B16 /* FCANavigationController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		1A738F37215E06CA00AC8B16 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,6 +507,13 @@
 			files = (
 				1A23E6A7215CE67000122985 /* ViewController.swift in Sources */,
 				1A23E6A5215CE67000122985 /* AppDelegate.swift in Sources */,
+				1A738F45215E0B0400AC8B16 /* RankViewController.swift in Sources */,
+				1A738F41215E0ADB00AC8B16 /* DiscoverViewController.swift in Sources */,
+				1A738F43215E0AF900AC8B16 /* MineViewController.swift in Sources */,
+				1A738F3B215E083A00AC8B16 /* FCANavigationController.swift in Sources */,
+				1A738F3D215E091600AC8B16 /* FCABaseViewController.swift in Sources */,
+				1A738F39215E081B00AC8B16 /* FCATabBarController.swift in Sources */,
+				1A738F3F215E0ACD00AC8B16 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
