@@ -7,23 +7,32 @@
 //
 
 import UIKit
+import UIColor_Hex_Swift
 
 class FCATabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let homeVc = getChildViewController(targetVcName:"HomeViewController")
-        let rankVc = getChildViewController(targetVcName: "RankViewController")
-        let discoverVc = getChildViewController(targetVcName: "DiscoverViewController")
-        let mineVc = getChildViewController(targetVcName: "MineViewController")
+        let homeVc = getChildViewController(targetVcName:"HomeViewController", title: "首页", imageName: "live-n", selectedImageName: "live-p")
+        let rankVc = getChildViewController(targetVcName: "RankViewController", title: "排行", imageName: "ranking-n", selectedImageName: "ranking-p")
+        let discoverVc = getChildViewController(targetVcName: "DiscoverViewController", title: "发现", imageName: "found-n", selectedImageName: "found-p")
+        let mineVc = getChildViewController(targetVcName: "MineViewController", title: "我的", imageName: "mine-n", selectedImageName: "mine-p")
         setViewControllers([homeVc!, rankVc!, discoverVc!, mineVc!], animated: true)
     }
     
-    func getChildViewController(targetVcName: String) -> UINavigationController? {
+    func getChildViewController(targetVcName: String, title: String, imageName: String, selectedImageName: String) -> UINavigationController? {
         guard let clazz = NSClassFromString(getClassName(targetClassName: targetVcName)) as? UIViewController.Type else {
             return nil
         }
         let vc = clazz.init()
+        let selectedImage = UIImage(named: selectedImageName)
+//        if let selectedImage = selectedImage {
+//            vc.tabBarItem = UITabBarItem(title: title, image: UIImage(named: imageName), selectedImage: selectedImage.withRenderingMode(.alwaysOriginal))
+//        }
+        // UIColor(red: 207, green: 149, blue: 55, alpha: 1.0)   UIColor("#CF9537")
+        let myTabBarItem = UITabBarItem(title: title, image: UIImage(named: imageName), selectedImage: selectedImage)
+        myTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(rede: 207, greene: 149, bluee: 55, alphae: 1.0)], for: UIControl.State.selected)
+        vc.tabBarItem = myTabBarItem
         let nav = FCANavigationController(rootViewController:vc)
         print(nav)
         return nav

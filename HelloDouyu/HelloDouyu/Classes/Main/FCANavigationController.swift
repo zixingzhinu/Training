@@ -12,9 +12,13 @@ class FCANavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationBar.barTintColor = UIColor.black
+        navigationBar.tintColor = .white
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
-
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return topViewController?.preferredStatusBarStyle ?? UIStatusBarStyle.default
+    }
 
 }
