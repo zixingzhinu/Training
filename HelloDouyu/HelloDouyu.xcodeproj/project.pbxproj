@@ -15,6 +15,12 @@
 		1A23E6BA215CE67200122985 /* HelloDouyuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A23E6B9215CE67200122985 /* HelloDouyuTests.swift */; };
 		1A23E6C5215CE67200122985 /* HelloDouyuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A23E6C4215CE67200122985 /* HelloDouyuUITests.swift */; };
 		1A23E6F0215D060300122985 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A23E6EF215D060300122985 /* types.plist */; };
+		1A3CC30C2160AC3F001D018C /* FCAPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3CC30B2160AC3F001D018C /* FCAPageView.swift */; };
+		1A3CC30E2160AC5A001D018C /* FCATitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3CC30D2160AC5A001D018C /* FCATitleView.swift */; };
+		1A3CC3102160AC70001D018C /* FCAContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3CC30F2160AC70001D018C /* FCAContentView.swift */; };
+		1A3CC3122160AC9F001D018C /* FCAPageConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3CC3112160AC9F001D018C /* FCAPageConfig.swift */; };
+		1A3CC3142160B2E6001D018C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3CC3132160B2E6001D018C /* Global.swift */; };
+		1A3CC3162160C432001D018C /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3CC3152160C432001D018C /* UIDevice-Extension.swift */; };
 		1A5D20A0215F5A6600EEE4B5 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D209F215F5A6600EEE4B5 /* UIColor-Extension.swift */; };
 		1A738F39215E081B00AC8B16 /* FCATabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F38215E081B00AC8B16 /* FCATabBarController.swift */; };
 		1A738F3B215E083A00AC8B16 /* FCANavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F3A215E083A00AC8B16 /* FCANavigationController.swift */; };
@@ -60,6 +66,12 @@
 		1A23E6C4215CE67200122985 /* HelloDouyuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloDouyuUITests.swift; sourceTree = "<group>"; };
 		1A23E6C6215CE67200122985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A23E6EF215D060300122985 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
+		1A3CC30B2160AC3F001D018C /* FCAPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCAPageView.swift; sourceTree = "<group>"; };
+		1A3CC30D2160AC5A001D018C /* FCATitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCATitleView.swift; sourceTree = "<group>"; };
+		1A3CC30F2160AC70001D018C /* FCAContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCAContentView.swift; sourceTree = "<group>"; };
+		1A3CC3112160AC9F001D018C /* FCAPageConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCAPageConfig.swift; sourceTree = "<group>"; };
+		1A3CC3132160B2E6001D018C /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		1A3CC3152160C432001D018C /* UIDevice-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-Extension.swift"; sourceTree = "<group>"; };
 		1A5D209F215F5A6600EEE4B5 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		1A738F38215E081B00AC8B16 /* FCATabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCATabBarController.swift; sourceTree = "<group>"; };
 		1A738F3A215E083A00AC8B16 /* FCANavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCANavigationController.swift; sourceTree = "<group>"; };
@@ -181,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				1A5D209F215F5A6600EEE4B5 /* UIColor-Extension.swift */,
+				1A3CC3152160C432001D018C /* UIDevice-Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -232,6 +245,10 @@
 		1A23E6DC215D02F700122985 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A3CC30B2160AC3F001D018C /* FCAPageView.swift */,
+				1A3CC30D2160AC5A001D018C /* FCATitleView.swift */,
+				1A3CC30F2160AC70001D018C /* FCAContentView.swift */,
+				1A3CC3112160AC9F001D018C /* FCAPageConfig.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -389,6 +406,7 @@
 		1A738F37215E06CA00AC8B16 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				1A3CC3132160B2E6001D018C /* Global.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -592,6 +610,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HelloDouyu/Pods-HelloDouyu-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
@@ -599,6 +618,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
@@ -633,12 +653,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A3CC30E2160AC5A001D018C /* FCATitleView.swift in Sources */,
 				1A23E6A7215CE67000122985 /* ViewController.swift in Sources */,
 				1A5D20A0215F5A6600EEE4B5 /* UIColor-Extension.swift in Sources */,
 				1A23E6A5215CE67000122985 /* AppDelegate.swift in Sources */,
 				1A738F45215E0B0400AC8B16 /* RankViewController.swift in Sources */,
+				1A3CC30C2160AC3F001D018C /* FCAPageView.swift in Sources */,
+				1A3CC3102160AC70001D018C /* FCAContentView.swift in Sources */,
 				1A738F41215E0ADB00AC8B16 /* DiscoverViewController.swift in Sources */,
+				1A3CC3142160B2E6001D018C /* Global.swift in Sources */,
 				1A738F43215E0AF900AC8B16 /* MineViewController.swift in Sources */,
+				1A3CC3122160AC9F001D018C /* FCAPageConfig.swift in Sources */,
+				1A3CC3162160C432001D018C /* UIDevice-Extension.swift in Sources */,
 				1A738F3B215E083A00AC8B16 /* FCANavigationController.swift in Sources */,
 				1A738F3D215E091600AC8B16 /* FCABaseViewController.swift in Sources */,
 				1A738F39215E081B00AC8B16 /* FCATabBarController.swift in Sources */,

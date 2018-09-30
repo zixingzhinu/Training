@@ -10,6 +10,8 @@ import UIKit
 import UIColor_Hex_Swift
 
 class FCATabBarController: UITabBarController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,7 @@ class FCATabBarController: UITabBarController {
         let discoverVc = getChildViewController(targetVcName: "DiscoverViewController", title: "发现", imageName: "found-n", selectedImageName: "found-p")
         let mineVc = getChildViewController(targetVcName: "MineViewController", title: "我的", imageName: "mine-n", selectedImageName: "mine-p")
         setViewControllers([homeVc!, rankVc!, discoverVc!, mineVc!], animated: true)
+        
     }
     
     func getChildViewController(targetVcName: String, title: String, imageName: String, selectedImageName: String) -> UINavigationController? {
@@ -34,7 +37,7 @@ class FCATabBarController: UITabBarController {
         myTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(rede: 207, greene: 149, bluee: 55, alphae: 1.0)], for: UIControl.State.selected)
         vc.tabBarItem = myTabBarItem
         let nav = FCANavigationController(rootViewController:vc)
-        print(nav)
+//        print(nav)
         return nav
     }
     
@@ -58,4 +61,10 @@ class FCATabBarController: UITabBarController {
         return newClassName
     }
 
+}
+
+extension UITabBarController {
+    var tabBarHeight: CGFloat {
+        return tabBar.frame.height
+    }
 }

@@ -10,12 +10,30 @@ import UIKit
 
 class FCATitleView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    let titles: [String]
+    let pageConfig: FCAPageConfig
+    
+    // MARK:- lifeCycle
+    init(frame: CGRect, titles: [String], pageConfig: FCAPageConfig) {
+        self.titles = titles
+        self.pageConfig = pageConfig
+        super.init(frame: frame)
+        
+        setupSubviews()
     }
-    */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("we have not implements this init function")
+    }
+    
+    // MARK:- private
+    private func setupSubviews() {
+        for title in titles {
+            let btn = UIButton(type: .custom)
+            btn.setTitle(title, for: .normal)
+            btn.setTitleColor(pageConfig.titleColorNormally, for: .normal)
+            btn.setTitleColor(pageConfig.titleColorSelected, for: .selected)
+        }
+        
+    }
 }

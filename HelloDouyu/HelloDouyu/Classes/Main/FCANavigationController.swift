@@ -9,6 +9,7 @@
 import UIKit
 
 class FCANavigationController: UINavigationController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,4 +22,13 @@ class FCANavigationController: UINavigationController {
         return topViewController?.preferredStatusBarStyle ?? UIStatusBarStyle.default
     }
 
+}
+
+extension UINavigationController {
+    var navigationBarHeight: CGFloat {
+        return navigationBar.frame.height
+    }
+    var navigationBarBottom: CGFloat {
+        return statusBarHeight + navigationBarHeight
+    }
 }

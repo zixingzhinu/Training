@@ -9,13 +9,47 @@
 import UIKit
 
 class FCAPageView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    let titles: [String]
+    let childVcs: [UIViewController]
+    let parentVc: UIViewController
+    let pageConfig: FCAPageConfig
+    var titleView: FCATitleView!
+    
+    init(frame: CGRect, titles: [String], childVcs: [UIViewController], parentVc: UIViewController, pageConfig: FCAPageConfig) {
+        self.titles = titles
+        self.childVcs = childVcs
+        self.parentVc = parentVc
+        self.pageConfig = pageConfig
+        super.init(frame: frame)
+        // 加载UI
+        setupUI()
     }
-    */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    /// 初始化UI
+    private func setupUI() {
+        self.backgroundColor = .red
+        setupTitleView()
+        setupContentView()
+    }
+    
+    /// 初始化TitleView
+    private func setupTitleView() {
+        let titleViewFrame = CGRect(x: 0, y: 0, width: screenWidth, height: pageConfig.titleViewH)
+        titleView = FCATitleView(frame: titleViewFrame, titles: titles, pageConfig: pageConfig)
+        addSubview(titleView)
+    }
+    
+    /// 初始化ContentView
+    private func setupContentView() {
+        let contentViewFrame = CGRect(x: 0, y: titleView.frame.maxY, width: screenWidth, height: bounds.height - titleView.frame.maxY)
+        let contentView = FCAContentView(frame: contentViewFrame, childVcs: childVcs, parentVc: parentVc, pageConfig: pageConfig)
+        addSubview(contentView)
+    }
 }
+
+

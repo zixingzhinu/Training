@@ -6,4 +6,11 @@
 //  Copyright © 2018 FinupCredit. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct FCAPageConfig {
+    var titleViewH: CGFloat = 44.0
+    var titleColorNormally = UIColor.black
+    var titleColorSelected = UIColor.black
+    
+}

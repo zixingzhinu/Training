@@ -6,4 +6,11 @@
 //  Copyright © 2018 FinupCredit. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+let screenBounds = UIScreen.main.bounds
+let screenWidth = screenBounds.width
+let screenheight = screenBounds.height
+let statusBarHeight = UIApplication.shared.statusBarFrame.height
+
+
