@@ -34,16 +34,25 @@ class FCATabBarController: UITabBarController {
 //        }
         // UIColor(red: 207, green: 149, blue: 55, alpha: 1.0)   UIColor("#CF9537")
         let myTabBarItem = UITabBarItem(title: title, image: UIImage(named: imageName), selectedImage: selectedImage)
-        myTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(rede: 207, greene: 149, bluee: 55, alphae: 1.0)], for: UIControl.State.selected)
+        myTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(r: 207, g: 149, b: 55, a: 1.0)], for: UIControl.State.selected)
         vc.tabBarItem = myTabBarItem
         let nav = FCANavigationController(rootViewController:vc)
 //        print(nav)
         return nav
     }
     
+    
+
+}
+
+extension FCATabBarController {
+    
+    /// 获取项目名称
+    ///
+    /// - Returns: 项目名称
     func getProjectName() -> String {
-//        let nameKey = "CFBundleName"
-//        let projectName = Bundle.main.object(forInfoDictionaryKey: nameKey) as! String
+        //        let nameKey = "CFBundleName"
+        //        let projectName = Bundle.main.object(forInfoDictionaryKey: nameKey) as! String
         // 上下两种方式都可以，目的是获取项目名
         let nameKey = "CFBundleExecutable"
         let projectName = Bundle.main.infoDictionary![nameKey] as! String
@@ -60,7 +69,6 @@ class FCATabBarController: UITabBarController {
         let newClassName = projectName + "." + targetClassName
         return newClassName
     }
-
 }
 
 extension UITabBarController {

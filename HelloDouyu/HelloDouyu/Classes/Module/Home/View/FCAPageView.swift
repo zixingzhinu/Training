@@ -15,6 +15,7 @@ class FCAPageView: UIView {
     let parentVc: UIViewController
     let pageConfig: FCAPageConfig
     var titleView: FCATitleView!
+    var contentView: FCAContentView!
     
     init(frame: CGRect, titles: [String], childVcs: [UIViewController], parentVc: UIViewController, pageConfig: FCAPageConfig) {
         self.titles = titles
@@ -32,7 +33,7 @@ class FCAPageView: UIView {
     
     /// 初始化UI
     private func setupUI() {
-        self.backgroundColor = .red
+        self.backgroundColor = .white
         setupTitleView()
         setupContentView()
     }
@@ -47,8 +48,11 @@ class FCAPageView: UIView {
     /// 初始化ContentView
     private func setupContentView() {
         let contentViewFrame = CGRect(x: 0, y: titleView.frame.maxY, width: screenWidth, height: bounds.height - titleView.frame.maxY)
-        let contentView = FCAContentView(frame: contentViewFrame, childVcs: childVcs, parentVc: parentVc, pageConfig: pageConfig)
+        contentView = FCAContentView(frame: contentViewFrame, childVcs: childVcs, parentVc: parentVc, pageConfig: pageConfig)
         addSubview(contentView)
+        // 为titleView设置代理
+        titleView.delegate = contentView
+        contentView.delegate = titleView
     }
 }
 
