@@ -19,6 +19,7 @@ class FCATitleView: UIView {
     private var previousLabel: UILabel!
     weak var delegate: FCATitleViewDelegate?
     fileprivate var preSelectedPage: CGFloat?
+    fileprivate var recordProgress: CGFloat = 0    //记录的进度
     
     // MARK:- lazy
     lazy var horizontalScrollView: UIScrollView = {
@@ -57,7 +58,7 @@ class FCATitleView: UIView {
             let label = UILabel()
             label.tag = i
             label.textColor = i == 0 ? pageConfig.titleColorSelected : pageConfig.titleColorNormally
-            label.font = UIFont.systemFont(ofSize: i == 0 ? pageConfig.titleFontSelected : pageConfig.titleFontNormally)
+            label.font = UIFont.systemFont(ofSize: pageConfig.titleFontSelected)
             label.text = title
             label.textAlignment = .center
             label.isUserInteractionEnabled = true
@@ -66,6 +67,10 @@ class FCATitleView: UIView {
             label.addGestureRecognizer(tap)
             if i == 0 {
                 previousLabel = label
+            }
+            else {
+                let fontOffset = pageConfig.titleFontNormally / pageConfig.titleFontSelected
+                label.transform = CGAffineTransform.identity.scaledBy(x: fontOffset, y: fontOffset)
             }
         }
     }
@@ -112,6 +117,13 @@ class FCATitleView: UIView {
         label.textColor = pageConfig.titleColorSelected
         label.font = UIFont.systemFont(ofSize: pageConfig.titleFontSelected)
         previousLabel = label
+        titleScrollOffsetX(label: label)
+        // 设置代理，通知ContentView进行滚动
+        delegate?.titleView(self, selectedIndex: label.tag)
+        
+    }
+    
+    fileprivate func titleScrollOffsetX(label: UILabel) {
         var offsetX = label.center.x - bounds.width / 2
         let rightAnchor = horizontalScrollView.contentSize.width - label.center.x
         if offsetX > 0 && rightAnchor >= bounds.width / 2 {
@@ -124,9 +136,6 @@ class FCATitleView: UIView {
             offsetX = horizontalScrollView.contentSize.width - bounds.width
         }
         horizontalScrollView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
-        // 设置代理，通知ContentView进行滚动
-        delegate?.titleView(self, selectedIndex: label.tag)
-        
     }
 }
 
@@ -163,15 +172,21 @@ extension FCATitleView: FCAContentViewDelegate {
         // FIXME: 这个地方使用缩放动画更好，不应该直接修改font
         let fontOffset = pageConfig.titleFontNormally / pageConfig.titleFontSelected
         let fontPreRate = fontOffset + (1 - fontOffset) * progress
-        let fontTarRate = 1 + (1 - fontOffset * progress)
+        let fontTarRate = 1 - (1 - fontOffset) * progress
         print("fontOffset: \(fontOffset), fontPreRate: \(fontPreRate), fontTarRate: \(fontTarRate)")
-        preLabel.transform = CGAffineTransform.identity.scaledBy(x: fontPreRate, y: fontPreRate)
+        preLabel.transform = CGAffineTransform.identity.scaledBy(x: fontTarRate, y: fontTarRate)
         tarLabel.transform = CGAffineTransform.identity.scaledBy(x: fontPreRate, y: fontPreRate)
         preLabel.textColor = preColor
-//        preLabel.font = UIFont.systemFont(ofSize: pageConfig.titleFontSelected - fontOffset * progress)
         tarLabel.textColor = tarColor
-//        tarLabel.font = UIFont.systemFont(ofSize: pageConfig.titleFontNormally + fontOffset * progress)
-        
+        if progress > recordProgress {
+            //向右scroll
+            titleScrollOffsetX(label: tarLabel)
+        }
+        else {
+            // 向左scroll
+            titleScrollOffsetX(label: preLabel)
+        }
+        recordProgress = progress
         
     }
     
