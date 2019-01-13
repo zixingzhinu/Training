@@ -70,7 +70,7 @@ class HomeViewController: FCABaseViewController {
         let height = screenheight - self.navigationController!.navigationBarBottom - self.tabBarController!.tabBarHeight
         let pageViewFrame = CGRect(x: 0, y: top, width: screenWidth, height: height)
         for _ in titles {
-            let vc = UIViewController()
+            let vc = WaterFallViewController()
             vc.view.backgroundColor = UIColor.randomColor()
             childVcs.append(vc)
         }
