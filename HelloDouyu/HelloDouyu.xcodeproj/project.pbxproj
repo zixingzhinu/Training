@@ -33,6 +33,8 @@
 		1A738F43215E0AF900AC8B16 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F42215E0AF900AC8B16 /* MineViewController.swift */; };
 		1A738F45215E0B0400AC8B16 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F44215E0B0400AC8B16 /* RankViewController.swift */; };
 		1AA3C97B21EB6B05004FC144 /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3C97A21EB6B05004FC144 /* WaterFallViewController.swift */; };
+		1AD3153421EC9BA000B9B74E /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3153321EC9BA000B9B74E /* PrefixHeader.swift */; };
+		1AD3153921EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3153821EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift */; };
 		636724A52FC7E13ED6DEA4F8 /* Pods_HelloDouyuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577737E17A65794AE6E2C384 /* Pods_HelloDouyuUITests.framework */; };
 		68015E28F7D4BF195E518447 /* Pods_HelloDouyu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3DEC28CCFD55D501388F828 /* Pods_HelloDouyu.framework */; };
 		B9BDC412194985D7C3440886 /* Pods_HelloDouyuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F30CD0B4C386C4D58DA050 /* Pods_HelloDouyuTests.framework */; };
@@ -88,6 +90,8 @@
 		1A738F42215E0AF900AC8B16 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		1A738F44215E0B0400AC8B16 /* RankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 		1AA3C97A21EB6B05004FC144 /* WaterFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
+		1AD3153321EC9BA000B9B74E /* PrefixHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
+		1AD3153821EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		1C420C110FE29B4C7D519DAF /* Pods-HelloDouyuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDouyuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloDouyuUITests/Pods-HelloDouyuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		24F30CD0B4C386C4D58DA050 /* Pods_HelloDouyuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloDouyuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2F58AE917F7DF2C35CB860 /* Pods-HelloDouyuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDouyuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloDouyuTests/Pods-HelloDouyuTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -399,6 +403,7 @@
 				1A23E6AB215CE67100122985 /* Assets.xcassets */,
 				1A23E6AD215CE67100122985 /* LaunchScreen.storyboard */,
 				1A23E6B0215CE67100122985 /* Info.plist */,
+				1AD3153321EC9BA000B9B74E /* PrefixHeader.swift */,
 			);
 			path = Asserts;
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 		1AA3C97821EB6A53004FC144 /* WaterFall */ = {
 			isa = PBXGroup;
 			children = (
+				1AD3153821EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift */,
 			);
 			path = WaterFall;
 			sourceTree = "<group>";
@@ -542,6 +548,7 @@
 				TargetAttributes = {
 					1A23E6A0215CE67000122985 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 					};
 					1A23E6B4215CE67200122985 = {
 						CreatedOnToolsVersion = 10.0;
@@ -649,6 +656,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftHandyFrame/SwiftHandyFrame.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 			);
@@ -657,6 +666,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHandyFrame.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
 			);
@@ -694,6 +705,8 @@
 				1A23E6A7215CE67000122985 /* ViewController.swift in Sources */,
 				1A5D20A0215F5A6600EEE4B5 /* UIColor-Extension.swift in Sources */,
 				1A23E6A5215CE67000122985 /* AppDelegate.swift in Sources */,
+				1AD3153921EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift in Sources */,
+				1AD3153421EC9BA000B9B74E /* PrefixHeader.swift in Sources */,
 				1A738F45215E0B0400AC8B16 /* RankViewController.swift in Sources */,
 				1AA3C97B21EB6B05004FC144 /* WaterFallViewController.swift in Sources */,
 				1A3CC30C2160AC3F001D018C /* FCAPageView.swift in Sources */,
@@ -884,8 +897,11 @@
 			baseConfigurationReference = F85276825BE9EEFEB102BE44 /* Pods-HelloDouyu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PN5SDJ27QA;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "$(SRCROOT)/HelloDouyu/Classes/Asserts/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -893,6 +909,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.finupcredit.HelloDouyu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -903,8 +920,11 @@
 			baseConfigurationReference = C56584F4EF834B64EEA4D92F /* Pods-HelloDouyu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PN5SDJ27QA;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "$(SRCROOT)/HelloDouyu/Classes/Asserts/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -75,6 +75,7 @@ extension FCAContentView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kContentCellID, for: indexPath)
         let childView = childVcs[indexPath.row].view
+        childView?.frame = cell.bounds
         if !cell.contentView.subviews.isEmpty {
             cell.contentView.subviews.map { (view: UIView) -> UIView in
                 view.removeFromSuperview()

@@ -21,8 +21,19 @@ class WaterFallViewController: UIViewController {
     }()
     
     lazy var collectionView: UICollectionView = {
-        var collectionViewLayout = UICollectionViewFlowLayout()
-        var collectionView: UICollectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height), collectionViewLayout: collectionViewLayout)
+        var collectionViewLayout = WaterFallCollectionViewFlowLayout()
+        collectionViewLayout.dataSource = self
+//        let colsNum:CGFloat = 3
+        let margin:CGFloat = 10
+        let marginSpace:CGFloat = 10
+//        let itemW: CGFloat = (self.view.bounds.width - marginLR * 2 - marginSpace * (colsNum - 1)) / colsNum
+//        let itemH: CGFloat = itemW
+//        collectionViewLayout.itemSize = CGSize(width: itemW, height: itemH)
+        collectionViewLayout.minimumLineSpacing = marginSpace
+        collectionViewLayout.minimumInteritemSpacing = marginSpace
+        collectionViewLayout.sectionInset = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+//        collectionViewLayout.collectionViewContentSize = CGSize(width: view.bounds.width, height: itemH * ())
+        var collectionView: UICollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewLayout)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -32,9 +43,15 @@ class WaterFallViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { (make) in
+            make.left.top.right.bottom.equalTo(self.view)
+        }
     }
     
+    deinit {
+        print("\(WaterFallViewController.self) deinit")
+    }
 
 }
 
@@ -47,6 +64,18 @@ extension WaterFallViewController: UICollectionViewDataSource, UICollectionViewD
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         cell.backgroundColor = UIColor.randomColor()
         return cell
+    }
+    
+    
+}
+
+extension WaterFallViewController: WaterFallCollectionViewFlowLayoutDataSource {
+    func numbersOfColumn() -> Int {
+        return 3
+    }
+    
+    func heightForItem(item: Int) -> CGFloat {
+        return CGFloat(arc4random_uniform(50) + 100)
     }
     
     
