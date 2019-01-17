@@ -56,6 +56,4 @@ extension WaterFallCollectionViewFlowLayout {
     override var collectionViewContentSize: CGSize {
         return CGSize(width: collectionView!.ct_width(), height: (colsHeightArray.max() ?? 0) + sectionInset.bottom)
     }
-    
-    
 }

@@ -10,6 +10,7 @@ target 'HelloDouyu' do
   pod 'Kingfisher', '~> 4.0'
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'HandyJSON', '~> 4.2.0'
   pod 'DeviceKit', '~> 1.3'
   pod 'SnapKit', '~> 4.0.0'
   pod 'SwiftHandyFrame'

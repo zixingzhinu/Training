@@ -33,6 +33,7 @@
 		1A738F43215E0AF900AC8B16 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F42215E0AF900AC8B16 /* MineViewController.swift */; };
 		1A738F45215E0B0400AC8B16 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F44215E0B0400AC8B16 /* RankViewController.swift */; };
 		1AA3C97B21EB6B05004FC144 /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3C97A21EB6B05004FC144 /* WaterFallViewController.swift */; };
+		1AA93BDA21F0858B006E5202 /* HomeMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA93BD921F0858B006E5202 /* HomeMainModel.swift */; };
 		1AD3153421EC9BA000B9B74E /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3153321EC9BA000B9B74E /* PrefixHeader.swift */; };
 		1AD3153921EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3153821EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift */; };
 		636724A52FC7E13ED6DEA4F8 /* Pods_HelloDouyuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577737E17A65794AE6E2C384 /* Pods_HelloDouyuUITests.framework */; };
@@ -90,6 +91,7 @@
 		1A738F42215E0AF900AC8B16 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		1A738F44215E0B0400AC8B16 /* RankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 		1AA3C97A21EB6B05004FC144 /* WaterFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
+		1AA93BD921F0858B006E5202 /* HomeMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainModel.swift; sourceTree = "<group>"; };
 		1AD3153321EC9BA000B9B74E /* PrefixHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
 		1AD3153821EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		1C420C110FE29B4C7D519DAF /* Pods-HelloDouyuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDouyuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloDouyuUITests/Pods-HelloDouyuUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		1A23E6DB215D02F700122985 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1AA93BD921F0858B006E5202 /* HomeMainModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -702,6 +705,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3CC30E2160AC5A001D018C /* FCATitleView.swift in Sources */,
+				1AA93BDA21F0858B006E5202 /* HomeMainModel.swift in Sources */,
 				1A23E6A7215CE67000122985 /* ViewController.swift in Sources */,
 				1A5D20A0215F5A6600EEE4B5 /* UIColor-Extension.swift in Sources */,
 				1A23E6A5215CE67000122985 /* AppDelegate.swift in Sources */,

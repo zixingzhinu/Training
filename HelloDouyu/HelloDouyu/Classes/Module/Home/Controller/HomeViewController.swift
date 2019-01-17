@@ -62,6 +62,12 @@ class HomeViewController: FCABaseViewController {
     }
     
     private func setupPageView() {
+        let titlesPath = Bundle.main.path(forResource: "types", ofType: "plist")
+        let titlesDictArray = NSArray(contentsOfFile: titlesPath!) as! [[String: String]]
+        var titlesArray = [HomeMainModel]()
+//        for dict in titlesDictArray {
+//            
+//        }
         let titles = ["搞笑", "视频", "社会", "北京", "中国", "本地化", "图片", "新时代", "轻松一刻", "公开课", "要闻", "科技", "技术开发"]
         var childVcs = [UIViewController]()
         var pageConfig = FCAPageConfig()
