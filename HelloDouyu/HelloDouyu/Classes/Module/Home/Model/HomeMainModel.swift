@@ -8,9 +8,22 @@
 
 import UIKit
 
+@objcMembers
 class HomeMainModel: NSObject {
 
-    var title: String!
-    var type: Int!
+    var title: String = ""
+    var type: Int = 0
     
+    override init() {
+        
+    }
+    
+    init(dict: [String: Any]) {
+        super.init()
+        setValuesForKeys(dict)
+    }
+    
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {
+        print(key)
+    }
 }

@@ -43,6 +43,7 @@ class HomeViewController: FCABaseViewController {
     // MARK:- private
     /// 设置导航栏
     private func setupNavigationBarItems() {
+        self.automaticallyAdjustsScrollViewInsets = false   //  因为有scrollview，关闭自动调整
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "home-logo"), style: .plain, target: self, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "search_btn_follow"), style: .plain, target: self, action: #selector(followItemDidClick(btn:)))
         let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
@@ -62,26 +63,38 @@ class HomeViewController: FCABaseViewController {
     }
     
     private func setupPageView() {
-        let titlesPath = Bundle.main.path(forResource: "types", ofType: "plist")
-        let titlesDictArray = NSArray(contentsOfFile: titlesPath!) as! [[String: String]]
-        var titlesArray = [HomeMainModel]()
-//        for dict in titlesDictArray {
-//            
-//        }
-        let titles = ["搞笑", "视频", "社会", "北京", "中国", "本地化", "图片", "新时代", "轻松一刻", "公开课", "要闻", "科技", "技术开发"]
+        let titlesArray = loadTitleArray()
+        let titles = titlesArray.map({ $0.title })
+//        let titles = ["搞笑", "视频", "社会", "北京", "中国", "本地化", "图片", "新时代", "轻松一刻", "公开课", "要闻", "科技", "技术开发"]
         var childVcs = [UIViewController]()
-        var pageConfig = FCAPageConfig()
+        let pageConfig = FCAPageConfig()
 //        pageConfig.isHorizontalScrollEnabled = false
         let top = self.navigationController!.navigationBarBottom
         let height = screenheight - self.navigationController!.navigationBarBottom - self.tabBarController!.tabBarHeight
         let pageViewFrame = CGRect(x: 0, y: top, width: screenWidth, height: height)
-        for _ in titles {
+        for type in titlesArray {
             let vc = WaterFallViewController()
+            vc.type = type
 //            vc.view.backgroundColor = UIColor.randomColor()
             childVcs.append(vc)
         }
         pageView = FCAPageView(frame: pageViewFrame, titles: titles, childVcs: childVcs, parentVc: self, pageConfig: pageConfig)
         view.addSubview(pageView)
+    }
+    
+    /// 加载本地plist
+    ///
+    /// - Returns: plist数据
+    private func loadTitleArray() -> [HomeMainModel] {
+        let titlesPath = Bundle.main.path(forResource: "types", ofType: "plist")
+        let titlesDictArray = NSArray(contentsOfFile: titlesPath!) as! [[String: Any]]
+        var titlesArray = [HomeMainModel]()
+        for dict in titlesDictArray {
+            let model = HomeMainModel(dict: dict)
+            titlesArray.append(model)
+        }
+        print("========\(titlesArray)")
+        return titlesArray
     }
 
 }

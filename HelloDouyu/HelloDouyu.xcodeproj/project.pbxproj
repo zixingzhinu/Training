@@ -188,8 +188,8 @@
 			children = (
 				1A23E6D5215D02F700122985 /* Core */,
 				1A23E6D8215D02F700122985 /* Module */,
-				1A23E6ED215D02F700122985 /* Asserts */,
 				1A23E6EE215D02F700122985 /* Main */,
+				1A23E6ED215D02F700122985 /* Asserts */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

@@ -10,6 +10,8 @@ import UIKit
 
 class WaterFallViewController: UIViewController {
     
+    var type: HomeMainModel?
+    
     fileprivate let cellId: String = "cellId"
     
     fileprivate lazy var dataSource: [String] = {

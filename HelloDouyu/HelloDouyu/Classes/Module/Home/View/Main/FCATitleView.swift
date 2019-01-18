@@ -28,6 +28,7 @@ class FCATitleView: UIView {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         scrollView.isUserInteractionEnabled = true
+        scrollView.contentOffset = CGPoint.zero
         scrollView.delegate = self
         return scrollView
     }()
