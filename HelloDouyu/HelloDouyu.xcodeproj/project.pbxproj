@@ -32,6 +32,17 @@
 		1A738F41215E0ADB00AC8B16 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F40215E0ADB00AC8B16 /* DiscoverViewController.swift */; };
 		1A738F43215E0AF900AC8B16 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F42215E0AF900AC8B16 /* MineViewController.swift */; };
 		1A738F45215E0B0400AC8B16 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A738F44215E0B0400AC8B16 /* RankViewController.swift */; };
+		1A84DB2C21F6B4D600828C0C /* WaterFallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A84DB2B21F6B4D600828C0C /* WaterFallModel.swift */; };
+		1A84DB2F21F6BE2300828C0C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A84DB2E21F6BE2300828C0C /* BaseModel.swift */; };
+		1A84DB3221F6FC8B00828C0C /* WaterFallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A84DB3021F6FC8B00828C0C /* WaterFallCollectionViewCell.swift */; };
+		1A84DB3321F6FC8B00828C0C /* WaterFallCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A84DB3121F6FC8B00828C0C /* WaterFallCollectionViewCell.xib */; };
+		1A84DB3521F70CF100828C0C /* NSObject-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A84DB3421F70CF100828C0C /* NSObject-Extension.swift */; };
+		1A84DB3821F714DE00828C0C /* UIImageView-Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A84DB3721F714DE00828C0C /* UIImageView-Kingfisher.swift */; };
+		1A922B1F21F59849004896A4 /* NetworkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A922B1E21F59849004896A4 /* NetworkKit.swift */; };
+		1A922B2221F5D580004896A4 /* WaterFallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A922B2121F5D580004896A4 /* WaterFallViewModel.swift */; };
+		1A922B2621F5D6AF004896A4 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A922B2521F5D6AF004896A4 /* URLConstants.swift */; };
+		1A922B2821F5E0F3004896A4 /* NSArray-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A922B2721F5E0F3004896A4 /* NSArray-Extension.swift */; };
+		1A922B2A21F5E65B004896A4 /* NSDictionary-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A922B2921F5E65B004896A4 /* NSDictionary-Extension.swift */; };
 		1AA3C97B21EB6B05004FC144 /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3C97A21EB6B05004FC144 /* WaterFallViewController.swift */; };
 		1AA93BDA21F0858B006E5202 /* HomeMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA93BD921F0858B006E5202 /* HomeMainModel.swift */; };
 		1AD3153421EC9BA000B9B74E /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3153321EC9BA000B9B74E /* PrefixHeader.swift */; };
@@ -90,6 +101,17 @@
 		1A738F40215E0ADB00AC8B16 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		1A738F42215E0AF900AC8B16 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		1A738F44215E0B0400AC8B16 /* RankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
+		1A84DB2B21F6B4D600828C0C /* WaterFallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallModel.swift; sourceTree = "<group>"; };
+		1A84DB2E21F6BE2300828C0C /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		1A84DB3021F6FC8B00828C0C /* WaterFallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallCollectionViewCell.swift; sourceTree = "<group>"; };
+		1A84DB3121F6FC8B00828C0C /* WaterFallCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaterFallCollectionViewCell.xib; sourceTree = "<group>"; };
+		1A84DB3421F70CF100828C0C /* NSObject-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject-Extension.swift"; sourceTree = "<group>"; };
+		1A84DB3721F714DE00828C0C /* UIImageView-Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView-Kingfisher.swift"; sourceTree = "<group>"; };
+		1A922B1E21F59849004896A4 /* NetworkKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKit.swift; sourceTree = "<group>"; };
+		1A922B2121F5D580004896A4 /* WaterFallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallViewModel.swift; sourceTree = "<group>"; };
+		1A922B2521F5D6AF004896A4 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		1A922B2721F5E0F3004896A4 /* NSArray-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSArray-Extension.swift"; sourceTree = "<group>"; };
+		1A922B2921F5E65B004896A4 /* NSDictionary-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDictionary-Extension.swift"; sourceTree = "<group>"; };
 		1AA3C97A21EB6B05004FC144 /* WaterFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
 		1AA93BD921F0858B006E5202 /* HomeMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainModel.swift; sourceTree = "<group>"; };
 		1AD3153321EC9BA000B9B74E /* PrefixHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
@@ -197,29 +219,36 @@
 		1A23E6D5215D02F700122985 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1A84DB3621F7149400828C0C /* Tools */,
+				1A84DB2D21F6BE1300828C0C /* Base */,
+				1A922B1D21F597E5004896A4 /* Network */,
 				1A738F37215E06CA00AC8B16 /* Global */,
-				1A23E6D6215D02F700122985 /* Tools */,
-				1A23E6D7215D02F700122985 /* CommonUI */,
+				1A23E6D6215D02F700122985 /* Extension */,
+				1A23E6D7215D02F700122985 /* VTJUIKits */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		1A23E6D6215D02F700122985 /* Tools */ = {
+		1A23E6D6215D02F700122985 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				1A5D209F215F5A6600EEE4B5 /* UIColor-Extension.swift */,
 				1A3CC3152160C432001D018C /* UIDevice-Extension.swift */,
 				1A70D23F2165DA3300BC6785 /* UILabel-Extension.swift */,
 				1A70D2412165DCBF00BC6785 /* String-Extension.swift */,
+				1A922B2721F5E0F3004896A4 /* NSArray-Extension.swift */,
+				1A922B2921F5E65B004896A4 /* NSDictionary-Extension.swift */,
+				1A84DB3421F70CF100828C0C /* NSObject-Extension.swift */,
+				1A84DB3721F714DE00828C0C /* UIImageView-Kingfisher.swift */,
 			);
-			path = Tools;
+			path = Extension;
 			sourceTree = "<group>";
 		};
-		1A23E6D7215D02F700122985 /* CommonUI */ = {
+		1A23E6D7215D02F700122985 /* VTJUIKits */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = CommonUI;
+			path = VTJUIKits;
 			sourceTree = "<group>";
 		};
 		1A23E6D8215D02F700122985 /* Module */ = {
@@ -237,6 +266,7 @@
 		1A23E6D9215D02F700122985 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1A922B2021F5D4BC004896A4 /* ViewModel */,
 				1A23E6DA215D02F700122985 /* Controller */,
 				1A23E6DB215D02F700122985 /* Model */,
 				1A23E6DC215D02F700122985 /* View */,
@@ -257,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				1AA93BD921F0858B006E5202 /* HomeMainModel.swift */,
+				1A84DB2B21F6B4D600828C0C /* WaterFallModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -425,8 +456,40 @@
 			isa = PBXGroup;
 			children = (
 				1A3CC3132160B2E6001D018C /* Global.swift */,
+				1A922B2521F5D6AF004896A4 /* URLConstants.swift */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		1A84DB2D21F6BE1300828C0C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1A84DB2E21F6BE2300828C0C /* BaseModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1A84DB3621F7149400828C0C /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		1A922B1D21F597E5004896A4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1A922B1E21F59849004896A4 /* NetworkKit.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1A922B2021F5D4BC004896A4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1A922B2121F5D580004896A4 /* WaterFallViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		1AA3C97721EB6A3F004FC144 /* Main */ = {
@@ -444,6 +507,8 @@
 			isa = PBXGroup;
 			children = (
 				1AD3153821EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift */,
+				1A84DB3021F6FC8B00828C0C /* WaterFallCollectionViewCell.swift */,
+				1A84DB3121F6FC8B00828C0C /* WaterFallCollectionViewCell.xib */,
 			);
 			path = WaterFall;
 			sourceTree = "<group>";
@@ -592,6 +657,7 @@
 				1A23E6AC215CE67100122985 /* Assets.xcassets in Resources */,
 				1A49D94621634452007BFEB8 /* README.md in Resources */,
 				1A23E6F0215D060300122985 /* types.plist in Resources */,
+				1A84DB3321F6FC8B00828C0C /* WaterFallCollectionViewCell.xib in Resources */,
 				1A23E6AA215CE67000122985 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,22 +773,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3CC30E2160AC5A001D018C /* FCATitleView.swift in Sources */,
+				1A922B2221F5D580004896A4 /* WaterFallViewModel.swift in Sources */,
+				1A922B2A21F5E65B004896A4 /* NSDictionary-Extension.swift in Sources */,
+				1A922B1F21F59849004896A4 /* NetworkKit.swift in Sources */,
 				1AA93BDA21F0858B006E5202 /* HomeMainModel.swift in Sources */,
 				1A23E6A7215CE67000122985 /* ViewController.swift in Sources */,
 				1A5D20A0215F5A6600EEE4B5 /* UIColor-Extension.swift in Sources */,
+				1A922B2621F5D6AF004896A4 /* URLConstants.swift in Sources */,
 				1A23E6A5215CE67000122985 /* AppDelegate.swift in Sources */,
 				1AD3153921EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift in Sources */,
+				1A84DB3821F714DE00828C0C /* UIImageView-Kingfisher.swift in Sources */,
 				1AD3153421EC9BA000B9B74E /* PrefixHeader.swift in Sources */,
 				1A738F45215E0B0400AC8B16 /* RankViewController.swift in Sources */,
+				1A922B2821F5E0F3004896A4 /* NSArray-Extension.swift in Sources */,
 				1AA3C97B21EB6B05004FC144 /* WaterFallViewController.swift in Sources */,
+				1A84DB3221F6FC8B00828C0C /* WaterFallCollectionViewCell.swift in Sources */,
 				1A3CC30C2160AC3F001D018C /* FCAPageView.swift in Sources */,
 				1A3CC3102160AC70001D018C /* FCAContentView.swift in Sources */,
 				1A738F41215E0ADB00AC8B16 /* DiscoverViewController.swift in Sources */,
+				1A84DB2F21F6BE2300828C0C /* BaseModel.swift in Sources */,
 				1A70D2422165DCBF00BC6785 /* String-Extension.swift in Sources */,
 				1A3CC3142160B2E6001D018C /* Global.swift in Sources */,
 				1A738F43215E0AF900AC8B16 /* MineViewController.swift in Sources */,
 				1A70D2402165DA3300BC6785 /* UILabel-Extension.swift in Sources */,
 				1A3CC3122160AC9F001D018C /* FCAPageConfig.swift in Sources */,
+				1A84DB2C21F6B4D600828C0C /* WaterFallModel.swift in Sources */,
+				1A84DB3521F70CF100828C0C /* NSObject-Extension.swift in Sources */,
 				1A3CC3162160C432001D018C /* UIDevice-Extension.swift in Sources */,
 				1A738F3B215E083A00AC8B16 /* FCANavigationController.swift in Sources */,
 				1A738F3D215E091600AC8B16 /* FCABaseViewController.swift in Sources */,
@@ -906,8 +982,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PN5SDJ27QA;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HelloDouyu/Classes/Asserts/PrefixHeader.swift";
 				INFOPLIST_FILE = "$(SRCROOT)/HelloDouyu/Classes/Asserts/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -929,8 +1005,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PN5SDJ27QA;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HelloDouyu/Classes/Asserts/PrefixHeader.swift";
 				INFOPLIST_FILE = "$(SRCROOT)/HelloDouyu/Classes/Asserts/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

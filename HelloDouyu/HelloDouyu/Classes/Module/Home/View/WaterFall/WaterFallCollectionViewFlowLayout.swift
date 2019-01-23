@@ -25,14 +25,15 @@ class WaterFallCollectionViewFlowLayout: UICollectionViewFlowLayout {
     }()
     
     fileprivate lazy var colsHeightArray = Array.init(repeating: sectionInset.top, count: colsNum)
-    
+    /// 如果有加载更多时启用
+    private var loadingMoreIndex = 0
     
 
     override func prepare() {
         let colsNumF = CGFloat(colsNum)
         let itemNums = collectionView!.numberOfItems(inSection: 0)
         let width: CGFloat = (collectionView!.ct_width() - sectionInset.left - sectionInset.right - minimumInteritemSpacing * (colsNumF - 1)) / colsNumF
-        for i in 0..<itemNums {
+        for i in loadingMoreIndex..<itemNums {
             let minColHeight = colsHeightArray.min() ?? 0
             let currIndex = colsHeightArray.firstIndex(of: minColHeight) ?? 0
             let itemH = dataSource?.heightForItem(item: i) ?? 0
@@ -45,6 +46,7 @@ class WaterFallCollectionViewFlowLayout: UICollectionViewFlowLayout {
             layoutAttrs.append(layoutAttr)
             colsHeightArray[currIndex] += (minimumLineSpacing + height)
         }
+        loadingMoreIndex = itemNums
     }
 }
 

@@ -8,19 +8,19 @@
 
 import UIKit
 
-class WaterFallViewController: UIViewController {
+class WaterFallViewController: FCABaseViewController {
     
-    var type: HomeMainModel?
+    var type: HomeMainModel!
     
     fileprivate let cellId: String = "cellId"
-    
-    fileprivate lazy var dataSource: [String] = {
-        var dataSource = [String]()
-        for i in 0..<50 {
-            dataSource.append("\(i)")
-        }
-        return dataSource
-    }()
+    fileprivate lazy var waterFallViewModel = WaterFallViewModel()
+//    fileprivate lazy var dataSource: [String] = {
+//        var dataSource = [String]()
+//        for i in 0..<50 {
+//            dataSource.append("\(i)")
+//        }
+//        return dataSource
+//    }()
     
     lazy var collectionView: UICollectionView = {
         var collectionViewLayout = WaterFallCollectionViewFlowLayout()
@@ -36,19 +36,21 @@ class WaterFallViewController: UIViewController {
         collectionViewLayout.sectionInset = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
 //        collectionViewLayout.collectionViewContentSize = CGSize(width: view.bounds.width, height: itemH * ())
         var collectionView: UICollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewLayout)
+        collectionView.backgroundColor = .white
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+//        print(WaterFallCollectionViewCell.className)
+//        print(collectionView.instanceClassName)
+        collectionView.register(UINib(nibName: WaterFallCollectionViewCell.className, bundle: nil), forCellWithReuseIdentifier: cellId)
         return collectionView
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(collectionView)
-        collectionView.snp.makeConstraints { (make) in
-            make.left.top.right.bottom.equalTo(self.view)
-        }
+        setupUI()
+        loadData(index: 0)
     }
     
     deinit {
@@ -56,28 +58,50 @@ class WaterFallViewController: UIViewController {
     }
 
 }
+// MARK:- private method
+extension WaterFallViewController {
+    func setupUI() {
+        view.backgroundColor = .white
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { (make) in
+            make.left.top.right.bottom.equalTo(self.view)
+        }
+    }
+    
+    func loadData(index: Int) {
+        waterFallViewModel.loadWaterFallData(model: type, index: index) {
+            self.collectionView.reloadData()
+        }
+    }
+}
 
+// MARK:- <UICollectionViewDataSource, UICollectionViewDelegate>
 extension WaterFallViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.count
+        return waterFallViewModel.waterFallModelArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        cell.backgroundColor = UIColor.randomColor()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! WaterFallCollectionViewCell
+//        cell.backgroundColor = UIColor.randomColor()
+        cell.waterFallModel = waterFallViewModel.waterFallModelArray[indexPath.item]
+        if indexPath.item == waterFallViewModel.waterFallModelArray.count - 1 {
+            loadData(index: waterFallViewModel.waterFallModelArray.count)
+        }
         return cell
     }
     
     
 }
 
+// MARK:- <WaterFallCollectionViewFlowLayoutDataSource>
 extension WaterFallViewController: WaterFallCollectionViewFlowLayoutDataSource {
     func numbersOfColumn() -> Int {
-        return 3
+        return 2
     }
     
     func heightForItem(item: Int) -> CGFloat {
-        return CGFloat(arc4random_uniform(50) + 100)
+        return item % 2 == 0 ? screenWidth * 2 / 3 : screenWidth / 2
     }
     
     
