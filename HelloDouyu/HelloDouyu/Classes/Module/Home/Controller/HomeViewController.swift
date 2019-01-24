@@ -93,7 +93,7 @@ class HomeViewController: FCABaseViewController {
             let model = HomeMainModel(dict: dict)
             titlesArray.append(model)
         }
-        print("========\(titlesArray)")
+//        print("========\(titlesArray)")
         return titlesArray
     }
 

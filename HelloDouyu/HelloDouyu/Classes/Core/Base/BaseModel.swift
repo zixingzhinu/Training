@@ -19,6 +19,6 @@ class BaseModel: NSObject {
         setValuesForKeys(dict)
     }
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        print("undefinedKey: \(key) -- value: \(value ?? "")")
+//        print("undefinedKey: \(key) -- value: \(value ?? "")")
     }
 }

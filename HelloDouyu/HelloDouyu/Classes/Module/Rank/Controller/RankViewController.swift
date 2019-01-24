@@ -14,7 +14,20 @@ class RankViewController: FCABaseViewController {
         super.viewDidLoad()
 
         title = "排行"
+        view.backgroundColor = UIColor.randomColor()
+        let button = UIButton(type: .custom)
+        button.setTitle("点我", for: .normal)
+        button.frame = CGRect(x: 10, y: 100, width: 100, height: 50)
+        view.addSubview(button)
+        button.addTarget(self, action: #selector(RankViewController.buttonDidClick), for: .touchUpInside)
     }
+    
+    @objc func buttonDidClick() {
+        let vc = UIViewController()
+        vc.view.backgroundColor = UIColor.randomColor()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
 
     /*

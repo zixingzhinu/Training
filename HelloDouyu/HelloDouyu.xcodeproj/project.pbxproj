@@ -47,6 +47,8 @@
 		1AA93BDA21F0858B006E5202 /* HomeMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA93BD921F0858B006E5202 /* HomeMainModel.swift */; };
 		1AD3153421EC9BA000B9B74E /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3153321EC9BA000B9B74E /* PrefixHeader.swift */; };
 		1AD3153921EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3153821EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift */; };
+		1AFCC89A21F9A5F100C4AD25 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCC89821F9A5F100C4AD25 /* RoomViewController.swift */; };
+		1AFCC89B21F9A5F100C4AD25 /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFCC89921F9A5F100C4AD25 /* RoomViewController.xib */; };
 		636724A52FC7E13ED6DEA4F8 /* Pods_HelloDouyuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577737E17A65794AE6E2C384 /* Pods_HelloDouyuUITests.framework */; };
 		68015E28F7D4BF195E518447 /* Pods_HelloDouyu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3DEC28CCFD55D501388F828 /* Pods_HelloDouyu.framework */; };
 		B9BDC412194985D7C3440886 /* Pods_HelloDouyuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F30CD0B4C386C4D58DA050 /* Pods_HelloDouyuTests.framework */; };
@@ -116,6 +118,8 @@
 		1AA93BD921F0858B006E5202 /* HomeMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainModel.swift; sourceTree = "<group>"; };
 		1AD3153321EC9BA000B9B74E /* PrefixHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
 		1AD3153821EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		1AFCC89821F9A5F100C4AD25 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		1AFCC89921F9A5F100C4AD25 /* RoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
 		1C420C110FE29B4C7D519DAF /* Pods-HelloDouyuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDouyuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloDouyuUITests/Pods-HelloDouyuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		24F30CD0B4C386C4D58DA050 /* Pods_HelloDouyuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloDouyuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2F58AE917F7DF2C35CB860 /* Pods-HelloDouyuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDouyuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloDouyuTests/Pods-HelloDouyuTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 		1A23E6DA215D02F700122985 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1AFCC89721F9A5A700C4AD25 /* Live */,
 				1AA3C97921EB6AC0004FC144 /* WaterFall */,
 				1A738F3E215E0ACD00AC8B16 /* HomeViewController.swift */,
 			);
@@ -521,6 +526,15 @@
 			path = WaterFall;
 			sourceTree = "<group>";
 		};
+		1AFCC89721F9A5A700C4AD25 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				1AFCC89821F9A5F100C4AD25 /* RoomViewController.swift */,
+				1AFCC89921F9A5F100C4AD25 /* RoomViewController.xib */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
 		D76E6D62423998643141C114 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,6 +669,7 @@
 			files = (
 				1A23E6AF215CE67100122985 /* LaunchScreen.storyboard in Resources */,
 				1A23E6AC215CE67100122985 /* Assets.xcassets in Resources */,
+				1AFCC89B21F9A5F100C4AD25 /* RoomViewController.xib in Resources */,
 				1A49D94621634452007BFEB8 /* README.md in Resources */,
 				1A23E6F0215D060300122985 /* types.plist in Resources */,
 				1A84DB3321F6FC8B00828C0C /* WaterFallCollectionViewCell.xib in Resources */,
@@ -778,6 +793,7 @@
 				1A922B1F21F59849004896A4 /* NetworkKit.swift in Sources */,
 				1AA93BDA21F0858B006E5202 /* HomeMainModel.swift in Sources */,
 				1A23E6A7215CE67000122985 /* ViewController.swift in Sources */,
+				1AFCC89A21F9A5F100C4AD25 /* RoomViewController.swift in Sources */,
 				1A5D20A0215F5A6600EEE4B5 /* UIColor-Extension.swift in Sources */,
 				1A922B2621F5D6AF004896A4 /* URLConstants.swift in Sources */,
 				1A23E6A5215CE67000122985 /* AppDelegate.swift in Sources */,
