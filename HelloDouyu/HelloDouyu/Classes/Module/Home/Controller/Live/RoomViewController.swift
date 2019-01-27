@@ -54,8 +54,14 @@ extension RoomViewController {
         }
     }
     private func execEmitter() {
-        let emitterLayer = CAEmitterLayer()
-        emitterLayer.scale = 1
+//        let emitterLayer = CAEmitterLayer()
+//        emitterLayer.scale = 1
+        let starsView = StarsEmitterView(frame: view.bounds)
+//        starsView.frame = CGRect(x: 0, y: 0, width: view.ct_width(), height: view.ct_height())
+        view.addSubview(starsView)
+//        starsView.snp.makeConstraints { (make) in
+//            make.left.top.right.bottom.equalTo(self.view)
+//        }
     }
 }
 // MARK:- Button Action
@@ -83,5 +89,6 @@ extension RoomViewController {
     }
     @IBAction func starsBtnDidClick(_ sender: UIButton) {
         print("点击了星星")
+        execEmitter()
     }
 }
