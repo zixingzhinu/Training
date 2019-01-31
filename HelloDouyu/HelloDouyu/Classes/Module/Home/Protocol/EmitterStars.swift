@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 protocol Stars {
-    func createStars()
 }
 
 /**
@@ -54,48 +53,65 @@ protocol Stars {
  CA_AVAILABLE_STARTING (10.6, 5.0, 9.0, 2.0);
  */
 extension Stars where Self: UIView {
-    func createStars() {
+    
+    func createStarsWithSelf() {
         let emitterLayer = layer as! CAEmitterLayer
+        _createEmitter(emitterLayer: emitterLayer)
+    }
+    
+    func createStarsInSelf() {
+        let emitterLayer = layer as! CAEmitterLayer
+        _createEmitter(emitterLayer: emitterLayer)
+        layer.addSublayer(emitterLayer)
+    }
+    
+    func createEmitterLayer() -> CAEmitterLayer {
+        let emitterLayer = CAEmitterLayer()
+        _createEmitter(emitterLayer: emitterLayer)
+        return emitterLayer
+    }
+    
+    private func _createEmitter(emitterLayer: CAEmitterLayer) {
         /* 产生的速度，即每秒发射出的粒子数量。 */
-//        emitterLayer.birthRate = 1
+        //        emitterLayer.birthRate = 1
         /*粒子的存活时间*/
-//        emitterLayer.lifetime = 1
+        //        emitterLayer.lifetime = 1
         
         /*发射器在XY平面的发射位置*/
         emitterLayer.emitterPosition = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
         print("emitterPosition=\(bounds), \(bounds.width), \(bounds.height)")
         /*发射器在Z平面的位置  */
-//        emitterLayer.emitterZPosition = 0
+        //        emitterLayer.emitterZPosition = 1
         
         /*粒子发射器尺寸大小*/
-        emitterLayer.emitterSize = CGSize(width: 150, height: 200)
+        emitterLayer.emitterSize = CGSize(width: 150, height: 150)
         /* 发射器深度，在某些模式下会产生立体效果 */
-//        emitterLayer.emitterDepth = 0
+        //        emitterLayer.emitterDepth = 0
         
         /* 发射器的形状。选项有point（默认）、line、rectangle、circle、cuboid、sphere。*/
-//        emitterLayer.emitterShape = CAEmitterLayerEmitterShape.point
+        //        emitterLayer.emitterShape = CAEmitterLayerEmitterShape.circle
         /*发射模式。选项有points、outline、surface、volume（默认）。*/
-//        emitterLayer.emitterMode = CAEmitterLayerEmitterMode.volume
+        //        emitterLayer.emitterMode = CAEmitterLayerEmitterMode.outline
         /*发射器渲染模式。*/
-//        emitterLayer.renderMode = CAEmitterLayerRenderMode.unordered
+        //        emitterLayer.renderMode = CAEmitterLayerRenderMode.additive
         
         /*是否开启三维空间效果。默认是NO。如果设置为true，filters、backgroundFilters的效果和图层的阴影相关的属性是不明确的。*/
-//        emitterLayer.preservesDepth = false
+        //        emitterLayer.preservesDepth = true
         /*粒子的运动速度。*/
-//        emitterLayer.velocity = 1
+        //        emitterLayer.velocity = 1
         /*粒子的缩放大小。*/
-//        emitterLayer.scale = 1
+        //        emitterLayer.scale = 1
         /*  粒子的旋转位置。 */
-//        emitterLayer.spin = 1
+        //        emitterLayer.spin = 1
         /* 初始化随机的粒子种子。默认是0。*/
-//        emitterLayer.seed = 0
+        //        emitterLayer.seed = 0
         
         
         let emitterCell = CAEmitterCell()
         /*粒子名字，用来构造键值粒子，与setValue:forKeyPath：搭配使用。默认是nil。*/
-//        emitterCell.name = nil
+        //        emitterCell.name = nil
         /*是否允许发射器的粒子被渲染*/
-//        emitterCell.isEnabled = true
+        //        emitterCell.isEnabled = true
         /* 产生的速度，即每秒发射出的粒子数量。 */
         emitterCell.birthRate = 10
         
@@ -105,11 +121,11 @@ extension Stars where Self: UIView {
         emitterCell.lifetimeRange = 1.5
         
         /*粒子在Z轴方向的发射角度*/
-//        emitterCell.emissionLatitude = 0
+        //        emitterCell.emissionLatitude = 0
         /*粒子在XY平面的发射角度*/
-        emitterCell.emissionLongitude = -.pi / 2
+        //        emitterCell.emissionLongitude = -.pi / 2
         /*粒子发射角度的容差，即角度变化范围。默认是0.*/
-        emitterCell.emissionRange = .pi / 2
+        //        emitterCell.emissionRange = .pi / 2
         
         /*粒子的速度*/
         emitterCell.velocity = 100
@@ -117,50 +133,50 @@ extension Stars where Self: UIView {
         emitterCell.velocityRange = 50
         
         /*粒子在x、y、z三个方向的加速度*/
-//        emitterCell.xAcceleration = 0
-//        emitterCell.yAcceleration = 0
-//        emitterCell.zAcceleration = 0
+        //        emitterCell.xAcceleration = 0
+        //        emitterCell.yAcceleration = 0
+        //        emitterCell.zAcceleration = 1
         
         /*粒子的缩放大小、缩放容差、缩放速度*/
         emitterCell.scale = 0.5
         emitterCell.scaleRange = 0.25
-//        emitterCell.scaleSpeed = 0
+        //        emitterCell.scaleSpeed = 1
         
         /*粒子的旋转度、旋转容差*/
-//        emitterCell.spin = 1
-//        emitterCell.spinRange = 0
+        //        emitterCell.spin = 1
+        //        emitterCell.spinRange = 0.5
         
         /*粒子颜色*/
         emitterCell.color = UIColor.randomColor().cgColor
         
         /*粒子在R、G、B色相上的容差和透明度*/
-//        emitterCell.redRange = 0
-//        emitterCell.greenRange = 0
-//        emitterCell.blueRange = 0
-//        emitterCell.alphaRange = 0
+        //        emitterCell.redRange = 0
+        //        emitterCell.greenRange = 0
+        //        emitterCell.blueRange = 0
+        //        emitterCell.alphaRange = 0
         
         /*粒子在R、G、B色相上的变化速度和透明度的变化速度*/
-//        emitterCell.redSpeed = 0
-//        emitterCell.greenSpeed = 0
-//        emitterCell.blueSpeed = 0
-//        emitterCell.alphaSpeed = 0
+        //        emitterCell.redSpeed = 0
+        //        emitterCell.greenSpeed = 0
+        //        emitterCell.blueSpeed = 0
+        //        emitterCell.alphaSpeed = 0
         
         /*粒子展示内容，一般用来设置图片。默认为nil。 */
         emitterCell.contents = UIImage(named: "good6_30x30")?.cgImage
         /*粒子展示内容的尺寸大小*/
-//        emitterCell.contentsRect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        //        emitterCell.contentsRect = CGRect(x: 0, y: 0, width: 1, height: 1)
         /*粒子展示内容的缩放比例*/
-//        emitterCell.contentsScale = 1
+        //        emitterCell.contentsScale = 1
         
         /*渲染内容图像用的滤波器参数*/
-//        emitterCell.minificationFilter = CALayerContentsFilter.linear.rawValue
-//        emitterCell.magnificationFilter = CALayerContentsFilter.linear.rawValue
-//        emitterCell.minificationFilterBias = 0
+        //        emitterCell.minificationFilter = CALayerContentsFilter.linear.rawValue
+        //        emitterCell.magnificationFilter = CALayerContentsFilter.linear.rawValue
+        //        emitterCell.minificationFilterBias = 0
         
         /*粒子数组*/
-//        emitterCell.emitterCells = nil
+        //        emitterCell.emitterCells = nil
         /* 继承自类似于图层上的属性 */
-//        emitterCell.style = nil
+        //        emitterCell.style = nil
         
         /* 存放添加到发射图层上的粒子数组。 */
         emitterLayer.emitterCells = [emitterCell]

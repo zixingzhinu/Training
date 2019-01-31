@@ -12,7 +12,7 @@ class StarsEmitterView: UIView, Stars {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        createStars()
+//        createStarsWithSel()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -21,6 +21,12 @@ class StarsEmitterView: UIView, Stars {
     
     override class var layerClass: AnyClass {
         return CAEmitterLayer.self
+    }
+    
+    override func didMoveToWindow() {
+        if self.superview != nil {
+            createStarsWithSelf()
+        }
     }
     
 }
