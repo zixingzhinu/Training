@@ -53,6 +53,10 @@ protocol Stars {
  CA_AVAILABLE_STARTING (10.6, 5.0, 9.0, 2.0);
  */
 extension Stars where Self: UIView {
+    /// 用于测试覆盖协议方法的方式，没有其他用处
+    func say(text: String) -> String {
+        return "He said \(text)"
+    }
     
     func createStarsWithSelf() {
         let emitterLayer = layer as! CAEmitterLayer
@@ -180,6 +184,10 @@ extension Stars where Self: UIView {
         
         /* 存放添加到发射图层上的粒子数组。 */
         emitterLayer.emitterCells = [emitterCell]
+    }
+    
+    func stop() {
+        
     }
 }
 

@@ -13,6 +13,15 @@ class StarsEmitterView: UIView, Stars {
     override init(frame: CGRect) {
         super.init(frame: frame)
 //        createStarsWithSel()
+        print(say(text: "I'm coming"))
+    }
+    
+    /// 测试方法，测试是否可以重写协议的方法，以及如何执行，没有实际意义。
+    ///
+    /// - Parameter text: text description
+    /// - Returns: return value description
+    func say(text: String) -> String {
+        return "I said:\(text)!!!"
     }
     
     required init?(coder aDecoder: NSCoder) {
