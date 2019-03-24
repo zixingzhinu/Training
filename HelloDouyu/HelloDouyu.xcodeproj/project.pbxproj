@@ -45,6 +45,7 @@
 		1A922B2621F5D6AF004896A4 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A922B2521F5D6AF004896A4 /* URLConstants.swift */; };
 		1A922B2821F5E0F3004896A4 /* NSArray-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A922B2721F5E0F3004896A4 /* NSArray-Extension.swift */; };
 		1A922B2A21F5E65B004896A4 /* NSDictionary-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A922B2921F5E65B004896A4 /* NSDictionary-Extension.swift */; };
+		1A97BFB022368BF200AED720 /* Nibloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A97BFAF22368BF200AED720 /* Nibloadable.swift */; };
 		1AA3C97B21EB6B05004FC144 /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3C97A21EB6B05004FC144 /* WaterFallViewController.swift */; };
 		1AA93BDA21F0858B006E5202 /* HomeMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA93BD921F0858B006E5202 /* HomeMainModel.swift */; };
 		1AD3153421EC9BA000B9B74E /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3153321EC9BA000B9B74E /* PrefixHeader.swift */; };
@@ -118,6 +119,7 @@
 		1A922B2521F5D6AF004896A4 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		1A922B2721F5E0F3004896A4 /* NSArray-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSArray-Extension.swift"; sourceTree = "<group>"; };
 		1A922B2921F5E65B004896A4 /* NSDictionary-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDictionary-Extension.swift"; sourceTree = "<group>"; };
+		1A97BFAF22368BF200AED720 /* Nibloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibloadable.swift; sourceTree = "<group>"; };
 		1AA3C97A21EB6B05004FC144 /* WaterFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
 		1AA93BD921F0858B006E5202 /* HomeMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainModel.swift; sourceTree = "<group>"; };
 		1AD3153321EC9BA000B9B74E /* PrefixHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				1A4B722E21FC884D008D256C /* EmitterStars.swift */,
+				1A97BFAF22368BF200AED720 /* Nibloadable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -822,6 +825,7 @@
 				1AD3153921EC9E8300B9B74E /* WaterFallCollectionViewFlowLayout.swift in Sources */,
 				1A84DB3821F714DE00828C0C /* UIImageView-Kingfisher.swift in Sources */,
 				1AD3153421EC9BA000B9B74E /* PrefixHeader.swift in Sources */,
+				1A97BFB022368BF200AED720 /* Nibloadable.swift in Sources */,
 				1A738F45215E0B0400AC8B16 /* RankViewController.swift in Sources */,
 				1A922B2821F5E0F3004896A4 /* NSArray-Extension.swift in Sources */,
 				1AA3C97B21EB6B05004FC144 /* WaterFallViewController.swift in Sources */,

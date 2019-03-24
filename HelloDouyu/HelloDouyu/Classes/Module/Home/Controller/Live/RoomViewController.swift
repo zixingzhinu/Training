@@ -9,12 +9,16 @@
 import UIKit
 
 class RoomViewController: FCABaseViewController {
+    
+    private var starsView: StarsEmitterView?
 
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nikenameLabel: UILabel!
     @IBOutlet weak var roomLabel: UILabel!
-    
+    @IBOutlet weak var roomNavigationBarView: UIView!
+    @IBOutlet weak var bottomToolBarView: UIView!
+    @IBOutlet weak var starsBtn: UIButton!
     
     
     // MARK:- lifeCycle
@@ -56,12 +60,18 @@ extension RoomViewController {
     private func execEmitter() {
 //        let emitterLayer = CAEmitterLayer()
 //        emitterLayer.scale = 1
-        let starsView = StarsEmitterView(frame: view.bounds)
+        starsView = StarsEmitterView(frame: view.bounds)
 //        starsView.frame = CGRect(x: 0, y: 0, width: view.ct_width(), height: view.ct_height())
-        view.addSubview(starsView)
-//        starsView.snp.makeConstraints { (make) in
+        view.addSubview(starsView!)
+        starsView!.snp.makeConstraints { (make) in
 //            make.left.top.right.bottom.equalTo(self.view)
-//        }
+            make.right.equalTo(self.view)
+            make.top.equalTo(self.roomNavigationBarView.snp.bottom).offset(10)
+            make.bottom.equalTo(self.bottomToolBarView.snp.top).offset(-5)
+            make.width.equalTo(self.starsBtn)
+        }
+        view.layoutIfNeeded()
+        starsView?.startAnim()
     }
 }
 // MARK:- Button Action
@@ -89,6 +99,11 @@ extension RoomViewController {
     }
     @IBAction func starsBtnDidClick(_ sender: UIButton) {
         print("点击了星星")
-        execEmitter()
+        if starsView?.isDescendant(of: view) ?? false {
+            starsView?.stopAnim()
+        }
+        else {
+            execEmitter()
+        }
     }
 }

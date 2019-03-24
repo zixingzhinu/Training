@@ -34,8 +34,21 @@ class StarsEmitterView: UIView, Stars {
     
     override func didMoveToWindow() {
         if self.superview != nil {
-            createStarsWithSelf()
+//            createStarsWithSelf()
         }
+    }
+    
+    func startAnim() {
+        createStarsWithSelf()
+    }
+    
+    func stopAnim() {
+//        stop()
+        dismiss()
+    }
+    
+    func dismiss() {
+        removeFromSuperview()
     }
     
 }

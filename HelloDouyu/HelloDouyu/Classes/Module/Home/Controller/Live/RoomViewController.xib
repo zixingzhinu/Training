@@ -14,8 +14,11 @@
             <connections>
                 <outlet property="avatarImageView" destination="BWc-3X-KZB" id="kuS-C8-6Xp"/>
                 <outlet property="bgImageView" destination="P4V-kj-sJU" id="kWa-3A-CN7"/>
+                <outlet property="bottomToolBarView" destination="1cV-x7-Xlg" id="Mel-tu-eac"/>
                 <outlet property="nikenameLabel" destination="kH6-v6-GQh" id="hdB-ap-5g6"/>
                 <outlet property="roomLabel" destination="4D4-Xf-zt4" id="1sn-0P-buF"/>
+                <outlet property="roomNavigationBarView" destination="3tt-cc-i4q" id="Xy2-51-AFY"/>
+                <outlet property="starsBtn" destination="ZKh-wU-KdM" id="AiC-7P-il8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -53,6 +53,7 @@ protocol Stars {
  CA_AVAILABLE_STARTING (10.6, 5.0, 9.0, 2.0);
  */
 extension Stars where Self: UIView {
+    
     /// 用于测试覆盖协议方法的方式，没有其他用处
     func say(text: String) -> String {
         return "He said \(text)"
@@ -76,19 +77,20 @@ extension Stars where Self: UIView {
     }
     
     private func _createEmitter(emitterLayer: CAEmitterLayer) {
+        
         /* 产生的速度，即每秒发射出的粒子数量。 */
         //        emitterLayer.birthRate = 1
         /*粒子的存活时间*/
         //        emitterLayer.lifetime = 1
         
         /*发射器在XY平面的发射位置*/
-        emitterLayer.emitterPosition = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
+        emitterLayer.emitterPosition = CGPoint(x: bounds.width / 2, y: bounds.height)
         print("emitterPosition=\(bounds), \(bounds.width), \(bounds.height)")
         /*发射器在Z平面的位置  */
         //        emitterLayer.emitterZPosition = 1
         
         /*粒子发射器尺寸大小*/
-        emitterLayer.emitterSize = CGSize(width: 150, height: 150)
+        emitterLayer.emitterSize = CGSize(width: 50, height: 50)
         /* 发射器深度，在某些模式下会产生立体效果 */
         //        emitterLayer.emitterDepth = 0
         
@@ -117,7 +119,7 @@ extension Stars where Self: UIView {
         /*是否允许发射器的粒子被渲染*/
         //        emitterCell.isEnabled = true
         /* 产生的速度，即每秒发射出的粒子数量。 */
-        emitterCell.birthRate = 10
+        emitterCell.birthRate = 0.1
         
         /* 粒子的存活时间*/
         emitterCell.lifetime = 3
@@ -127,9 +129,9 @@ extension Stars where Self: UIView {
         /*粒子在Z轴方向的发射角度*/
         //        emitterCell.emissionLatitude = 0
         /*粒子在XY平面的发射角度*/
-        //        emitterCell.emissionLongitude = -.pi / 2
+                emitterCell.emissionLongitude = -.pi / 2
         /*粒子发射角度的容差，即角度变化范围。默认是0.*/
-        //        emitterCell.emissionRange = .pi / 2
+                emitterCell.emissionRange = .pi / 8
         
         /*粒子的速度*/
         emitterCell.velocity = 100
@@ -186,8 +188,23 @@ extension Stars where Self: UIView {
         emitterLayer.emitterCells = [emitterCell]
     }
     
+    func dismiss() {
+        if layer .isKind(of: CAEmitterLayer.self) {
+            let emitterLayer = layer as! CAEmitterLayer
+            emitterLayer.removeFromSuperlayer()
+            return
+        }
+        layer.sublayers?.filter({ (sublayer) -> Bool in
+            sublayer.isKind(of: CAEmitterLayer.self)
+        }).first?.removeFromSuperlayer()
+    }
+    
     func stop() {
-        
+        if layer .isKind(of: CAEmitterLayer.self) {
+            let emitterLayer = layer as! CAEmitterLayer
+            emitterLayer.emitterCells = nil;
+            return
+        }
     }
 }
 
