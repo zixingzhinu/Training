@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - DeviceKit (1.8.1)
-  - HandyJSON (4.2.1)
+  - HandyJSON (5.0.0)
   - Kingfisher (4.10.0)
   - SnapKit (4.0.1)
   - SwiftHandyFrame (5)
@@ -11,7 +11,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - DeviceKit (~> 1.3)
-  - HandyJSON (~> 4.2.0)
+  - HandyJSON (~> 5.0.0)
   - Kingfisher (~> 4.0)
   - SnapKit (~> 4.0.0)
   - SwiftHandyFrame
@@ -32,13 +32,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   DeviceKit: eb29be542f5473b46b1c719011cf7de3ec5264ca
-  HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
+  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftHandyFrame: d2c11d3774d73a103cd6287c0933f97ab459d6ff
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   UIColor_Hex_Swift: bc07fc197421ee896b9ed6dcfa2054b7fbf75145
 
-PODFILE CHECKSUM: 1d1ccdf27a55ec7a8f043601ac261c7e5271d341
+PODFILE CHECKSUM: ee10a3e8d68bd29b9488aa059245131c532660a0
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.1
