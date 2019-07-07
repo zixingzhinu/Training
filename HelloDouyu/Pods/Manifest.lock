@@ -1,22 +1,22 @@
 PODS:
-  - Alamofire (4.7.3)
-  - DeviceKit (1.8.1)
+  - Alamofire (5.0.0-beta.6)
+  - DeviceKit (2.0.0)
   - HandyJSON (5.0.0)
-  - Kingfisher (4.10.0)
-  - SnapKit (4.0.1)
+  - Kingfisher (5.7.0)
+  - SnapKit (5.0.0)
   - SwiftHandyFrame (5)
   - SwiftyJSON (4.2.0)
-  - UIColor_Hex_Swift (4.2.0)
+  - UIColor_Hex_Swift (5.1.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.7)
-  - DeviceKit (~> 1.3)
+  - Alamofire (~> 5.0.0-beta.5)
+  - DeviceKit (~> 2.0)
   - HandyJSON (~> 5.0.0)
-  - Kingfisher (~> 4.0)
-  - SnapKit (~> 4.0.0)
+  - Kingfisher (~> 5.0)
+  - SnapKit (~> 5.0.0)
   - SwiftHandyFrame
   - SwiftyJSON (~> 4.0)
-  - UIColor_Hex_Swift (~> 4.2.0)
+  - UIColor_Hex_Swift (~> 5.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -30,15 +30,15 @@ SPEC REPOS:
     - UIColor_Hex_Swift
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  DeviceKit: eb29be542f5473b46b1c719011cf7de3ec5264ca
+  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
+  DeviceKit: 72d36709552d4b3582abd76a53949148acad9811
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
-  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
-  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SwiftHandyFrame: d2c11d3774d73a103cd6287c0933f97ab459d6ff
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
-  UIColor_Hex_Swift: bc07fc197421ee896b9ed6dcfa2054b7fbf75145
+  UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
 
-PODFILE CHECKSUM: ee10a3e8d68bd29b9488aa059245131c532660a0
+PODFILE CHECKSUM: 8aba451af4a1655a969fb805b22747c199aa2cfd
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.7.3

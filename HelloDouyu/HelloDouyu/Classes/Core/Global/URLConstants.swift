@@ -8,5 +8,5 @@
 
 import Foundation
 
-let URL_Home_WaterFall = "http://qf.56.com/home/v4/moreAnchor.ios"
+let URL_Home_WaterFall = "http://qf.56.com/home/v5/moreAnchor.ios"
 

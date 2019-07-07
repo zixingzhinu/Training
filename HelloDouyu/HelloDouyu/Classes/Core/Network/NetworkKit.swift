@@ -14,9 +14,9 @@ class NetworkKit: NSObject {
 
     class func requestData(url: String, method: HTTPMethod = .post, params: [String: Any]? = nil, headers: HTTPHeaders? = nil, completion: @escaping (_ result: Any) -> ()) {
         print("==url地址：\(url)，params：\(String(describing: params))")
-        Alamofire.request(url, method: method, parameters: params, headers: headers).validate(contentType: ["text/plain"]).responseJSON { (response:DataResponse<Any>) in
-            guard let result = response.result.value else {
-                print(response.result.error!)
+        Alamofire.AF.request(url, method: method, parameters: params, headers: headers).validate(contentType: ["text/plain"]).responseJSON { (response:DataResponse<Any>) in
+            guard let result = response.value else {
+                print(response.error!)
                 return
             }
 //            guard let data = response.data else {
