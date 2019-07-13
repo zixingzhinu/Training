@@ -1,18 +1,38 @@
 PODS:
   - Alamofire (5.0.0-beta.6)
+  - CTMediator (25)
+  - CTNetworkingSwift (15):
+    - Alamofire
+    - CTMediator
+    - SwiftyJSON
   - DeviceKit (2.0.0)
   - HandyJSON (5.0.0)
   - Kingfisher (5.7.0)
+  - PromiseKit (6.10.0):
+    - PromiseKit/CorePromise (= 6.10.0)
+    - PromiseKit/Foundation (= 6.10.0)
+    - PromiseKit/UIKit (= 6.10.0)
+  - PromiseKit/CorePromise (6.10.0)
+  - PromiseKit/Foundation (6.10.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.10.0):
+    - PromiseKit/CorePromise
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
   - SnapKit (5.0.0)
   - SwiftHandyFrame (5)
   - SwiftyJSON (4.2.0)
   - UIColor_Hex_Swift (5.1.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.0.0-beta.5)
+  - Alamofire (~> 5.0.0-beta.6)
+  - CTNetworkingSwift (~> 15)
   - DeviceKit (~> 2.0)
   - HandyJSON (~> 5.0.0)
   - Kingfisher (~> 5.0)
+  - PromiseKit (~> 6.8)
+  - R.swift
   - SnapKit (~> 5.0.0)
   - SwiftHandyFrame
   - SwiftyJSON (~> 4.0)
@@ -21,9 +41,14 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - CTMediator
+    - CTNetworkingSwift
     - DeviceKit
     - HandyJSON
     - Kingfisher
+    - PromiseKit
+    - R.swift
+    - R.swift.Library
     - SnapKit
     - SwiftHandyFrame
     - SwiftyJSON
@@ -31,14 +56,19 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
+  CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
+  CTNetworkingSwift: 6e5a58f92396faa4c396300653240418e77da245
   DeviceKit: 72d36709552d4b3582abd76a53949148acad9811
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
+  PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SwiftHandyFrame: d2c11d3774d73a103cd6287c0933f97ab459d6ff
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
 
-PODFILE CHECKSUM: 8aba451af4a1655a969fb805b22747c199aa2cfd
+PODFILE CHECKSUM: 1178933ce5aecc30cf856e16f3763ff185332f19
 
 COCOAPODS: 1.7.3

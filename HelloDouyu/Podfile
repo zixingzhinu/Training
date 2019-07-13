@@ -8,45 +8,57 @@ target 'HelloDouyu' do
   # Pods for HelloDouyu
   # Network
   pod 'Kingfisher', '~> 5.0'
-  pod 'Alamofire', '~> 5.0.0-beta.5'
-  # pod 'PromiseKit', '~> 6.8'
-  # pod 'Moya', '~> 13.0
+  pod 'Alamofire', '~> 5.0.0-beta.6'
+  pod 'CTNetworkingSwift', '~> 15'
+  pod 'PromiseKit', '~> 6.8'
+#  pod 'Moya', '~> 13.0'
   #  pod 'ReachabilitySwift'
+  
   # JSON
   pod 'SwiftyJSON', '~> 4.0'
   pod 'HandyJSON', '~> 5.0.0'
+  
   # Constraint&Frame
   pod 'SnapKit', '~> 5.0.0'
   pod 'SwiftHandyFrame'
+  
   # ToolKits
   pod 'DeviceKit', '~> 2.0'
   pod 'UIColor_Hex_Swift', '~> 5.1.0'
   #  pod 'SwiftyUserDefaults', '~> 4.0'
+  
   # autocompleted resources
-  #  pod 'R.swift'
+  pod 'R.swift'
   #  pod 'SwiftLint'
   #  pod 'DKImagePickerController'
+  
   # ReactiveX
   # pod 'RxSwift', '~> 5'
   # pod 'RxCocoa', '~> 5'
   # RAC
 #  pod 'ReactiveCocoa', '~> 9.0'
+
   # Logger
 #  pod 'XCGLogger', '~> 7.0.0'
 #  pod 'IQKeyboardManagerSwift', '6.3.0'
+
   # HUD
   # pod 'MBProgressHUD', '~> 1.1.0'
   #  pod 'PKHUD', '~> 5.0'  # a swift hud lib
   #  pod "SwiftSpinner"
   #  pod "KRProgressHUD"
+  
   # TableView
   # pod 'DZNEmptyDataSet'
+  
   # 侧滑
 #  pod 'ENSwiftSideMenu', '~> 0.1.4'
+
   # DebugMan
 #  pod 'CocoaDebug', :configurations => ['Debug']
+
   # In App Purchases
-  # pod 'SwiftyStoreKit'
+#  pod 'SwiftyStoreKit'
   # Swift code format
   # pod 'SwiftFormat/CLI'
 
