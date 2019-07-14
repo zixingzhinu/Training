@@ -1014,6 +1014,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HelloDouyu/Classes/Asserts/PrefixHeader.swift";
 				INFOPLIST_FILE = "$(SRCROOT)/HelloDouyu/Classes/Asserts/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1037,6 +1038,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HelloDouyu/Classes/Asserts/PrefixHeader.swift";
 				INFOPLIST_FILE = "$(SRCROOT)/HelloDouyu/Classes/Asserts/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

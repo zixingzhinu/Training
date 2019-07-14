@@ -17,7 +17,7 @@ class WaterFallCollectionViewCell: UICollectionViewCell {
     
     var waterFallModel: WaterFallModel? {
         didSet {
-            avatarImageView.setImage(waterFallModel!.isEvenIndex ? waterFallModel?.pic51 : waterFallModel?.pic74, "home_pic_default")
+            avatarImageView.setImage(waterFallModel?.pic51, "home_pic_default")
             liveImageView.isHidden = waterFallModel?.live == 0
             nicknameLabel.text = waterFallModel?.name
             audienceNumberButton.setTitle("\(waterFallModel?.focus ?? 0)", for: .normal)

@@ -1,7 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-HelloDouyu/Pods-HelloDouyu-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
-${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework
-${BUILT_PRODUCTS_DIR}/CTNetworkingSwift/CTNetworkingSwift.framework
 ${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework
 ${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework

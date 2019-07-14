@@ -113,10 +113,11 @@ class FCATitleView: UIView {
         print("点击了:\(tap)")
         print("target:\(tap.view!)")
         let label = tap.view as! UILabel
-        previousLabel.textColor = pageConfig.titleColorNormally
-        previousLabel.font = UIFont.systemFont(ofSize: pageConfig.titleFontNormally)
-        label.textColor = pageConfig.titleColorSelected
-        label.font = UIFont.systemFont(ofSize: pageConfig.titleFontSelected)
+//        previousLabel.textColor = pageConfig.titleColorNormally
+//        previousLabel.font = UIFont.systemFont(ofSize: pageConfig.titleFontNormally)
+//        label.textColor = pageConfig.titleColorSelected
+//        label.font = UIFont.systemFont(ofSize: pageConfig.titleFontSelected)
+        changeTitleSize(preLabel: previousLabel, tarLabel: label, progress: 1.0, preColor: pageConfig.titleColorNormally, tarColor: pageConfig.titleColorSelected)
         previousLabel = label
         titleScrollOffsetX(label: label)
         // 设置代理，通知ContentView进行滚动
@@ -171,14 +172,8 @@ extension FCATitleView: FCAContentViewDelegate {
         let tarColor = UIColor(red: normalColor.red + redOffset * progress, green: normalColor.green + greenOffset * progress, blue: normalColor.blue + blueOffset * progress, alpha: normalColor.alpha)
         
         // FIXME: 这个地方使用缩放动画更好，不应该直接修改font
-        let fontOffset = pageConfig.titleFontNormally / pageConfig.titleFontSelected
-        let fontPreRate = fontOffset + (1 - fontOffset) * progress
-        let fontTarRate = 1 - (1 - fontOffset) * progress
-        print("fontOffset: \(fontOffset), fontPreRate: \(fontPreRate), fontTarRate: \(fontTarRate)")
-        preLabel.transform = CGAffineTransform.identity.scaledBy(x: fontTarRate, y: fontTarRate)
-        tarLabel.transform = CGAffineTransform.identity.scaledBy(x: fontPreRate, y: fontPreRate)
-        preLabel.textColor = preColor
-        tarLabel.textColor = tarColor
+        changeTitleSize(preLabel: preLabel, tarLabel: tarLabel, progress: progress, preColor: preColor, tarColor: tarColor)
+        
         if progress > recordProgress {
             //向右scroll
             titleScrollOffsetX(label: tarLabel)
@@ -189,6 +184,18 @@ extension FCATitleView: FCAContentViewDelegate {
         }
         recordProgress = progress
         
+    }
+    
+    /// 改变原始title和目标title的大小
+    func changeTitleSize(preLabel: UILabel, tarLabel: UILabel, progress: CGFloat, preColor: UIColor, tarColor: UIColor) {
+        let fontOffset = pageConfig.titleFontNormally / pageConfig.titleFontSelected
+        let fontPreRate = fontOffset + (1 - fontOffset) * progress
+        let fontTarRate = 1 - (1 - fontOffset) * progress
+        print("fontOffset: \(fontOffset), fontPreRate: \(fontPreRate), fontTarRate: \(fontTarRate)")
+        preLabel.transform = CGAffineTransform.identity.scaledBy(x: fontTarRate, y: fontTarRate)
+        tarLabel.transform = CGAffineTransform.identity.scaledBy(x: fontPreRate, y: fontPreRate)
+        preLabel.textColor = preColor
+        tarLabel.textColor = tarColor
     }
     
 }
