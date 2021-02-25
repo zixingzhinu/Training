@@ -9,7 +9,8 @@ import UIKit
 
 class WATabBarController: UITabBarController {
     
-    func getChildViewController() -> ViewController {
-        <#function body#>
+    func getChildViewController(vc: UIViewController, title: String, imageName: String, selectedImageName: String) -> UIViewController {
+        let nav = WANavigationController(rootViewController: vc)
+        return nav
     }
 }

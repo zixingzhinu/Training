@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A671FCE25E7A102002CAA01 /* WATabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A671FCD25E7A102002CAA01 /* WATabBarController.swift */; };
+		1A671FEB25E7B2DD002CAA01 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A671FEA25E7B2DD002CAA01 /* BaseViewController.swift */; };
 		1A7AA38C25E3C88B007F7288 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AA38B25E3C88B007F7288 /* AppDelegate.swift */; };
 		1A7AA38E25E3C88B007F7288 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AA38D25E3C88B007F7288 /* SceneDelegate.swift */; };
 		1A7AA39325E3C88B007F7288 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7AA39125E3C88B007F7288 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		1A671FCD25E7A102002CAA01 /* WATabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WATabBarController.swift; sourceTree = "<group>"; };
+		1A671FEA25E7B2DD002CAA01 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1A7AA38825E3C88B007F7288 /* WanAndroidSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WanAndroidSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7AA38B25E3C88B007F7288 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A7AA38D25E3C88B007F7288 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A671FE925E7B2D2002CAA01 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1A671FEA25E7B2DD002CAA01 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		1A7AA37F25E3C88B007F7288 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +151,7 @@
 		1AD6C13E25E519A000D61CE1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1A671FE925E7B2D2002CAA01 /* Base */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -293,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A671FEB25E7B2DD002CAA01 /* BaseViewController.swift in Sources */,
 				1A7AA38C25E3C88B007F7288 /* AppDelegate.swift in Sources */,
 				1A7AA38E25E3C88B007F7288 /* SceneDelegate.swift in Sources */,
 				1AD6C14225E51C1000D61CE1 /* WANavigationController.swift in Sources */,
