@@ -1,0 +1,104 @@
+//
+//  ArrayExtension.swift
+//  HelloSwiftKits
+//
+//  Created by James on 2019/7/28.
+//  Copyright © 2019 FinupCredit. All rights reserved.
+//
+
+import Foundation
+public extension Array {
+    
+    /// This function creates an intermediate variable to store the values of each step, and then uses map to gradually create the result array from this intermediate value
+    ///
+    /// e.g let accumulate = [1,2,3,5].accumulate(0, +)
+    /// print(accumulate)   "[1, 3, 6, 11]"
+    /// - Parameters:
+    ///   - initialResult: Result
+    ///   - nextPartialResult: (Result, Element) -> Result
+    /// - Returns: [Result]
+    func accumulate<Result>(_ initialResult: Result,
+                            _ nextPartialResult: (Result, Element) -> Result) -> [Result]
+    {
+        var running = initialResult
+        return map { next in
+            running = nextPartialResult(running, next)
+            return running
+        }
+    }
+}
+
+/// Fibonacci number
+public let fibonacci = AnySequence(fibsIterator)
+
+public func fibsIterator() -> AnyIterator<Int> {
+    var state = (0,1)
+    return AnyIterator {
+        let upcomingNumber = state.0
+        state = (state.1,state.0 + state.1)
+        return upcomingNumber
+    }
+}
+
+public extension Sequence {
+    
+    /// In the inverted array, find the first element satisfying the specified condition
+    /// var arrs = ["swift","oc","C++","Java","aa"]
+    /// let last = arrs.last { $0.hasSuffix("a")}
+    /// print(last)  "aa"
+    /// - Parameter predicate: Iterator.Element
+    /// - Returns: Element ?? nil
+    func last(where predicate: (Iterator.Element) -> Bool) -> Iterator.Element? {
+        for element in reversed() where predicate(element) {
+            return element
+        }
+        return nil
+    }
+    
+    /// Check whether all elements in a sequence satisfy a certain condition
+    /// For a condition, if no element does not satisfy it, it means that all elements satisfy it
+    ///
+    /// e.g： let nums = [1,2,3,4,5,6,7,8,9]
+    ///       evenNums.all { $0 % 2 == 0 }   "false"
+    ///
+    /// - Parameter predicate: Iterator.Element
+    /// - Returns: True or False
+    func all(matching predicate: (Iterator.Element) -> Bool) -> Bool {
+        return !contains { !predicate($0) }
+    }
+}
+
+//public extension Sequence
+//    where Iterator.Element: Equatable,
+//    SubSequence: Sequence,
+//    SubSequence.Iterator.Element == Iterator.Element
+//{
+//    /// Check whether the beginning and end of a sequence begin with the same N element
+//    ///
+//    /// - Parameter n: elements
+//    /// - Returns: true or false
+//    public func headMirrorsTail(_ n: Int) -> Bool {
+//        let head = prefix(n)
+//        let tail = suffix(n).reversed()
+//        return head.elementsEqual(tail)
+//    }
+//}
+
+public extension Sequence where Iterator.Element: Hashable {
+    /// Gets all the unique elements in the sequence
+    /// e.g: let unique = [1,2,3,4,5,6,1,1,1,1,1].unique()
+    ///          print(unique)     "[1, 2, 3, 4, 5, 6]"
+    ///
+    /// - Returns: All the unique elements are placed in a Set, and then returned to the contents of the collection
+    func unique() -> [Iterator.Element] {
+        var seen: Set<Iterator.Element> = []
+        return filter {
+            if seen.contains($0) {
+                return false
+            } else {
+                seen.insert($0)
+                return true
+            }
+        }
+    }
+}

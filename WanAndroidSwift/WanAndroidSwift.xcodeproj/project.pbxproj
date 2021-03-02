@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,51 @@
 		1A7AA3A325E3C88C007F7288 /* WanAndroidSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AA3A225E3C88C007F7288 /* WanAndroidSwiftTests.swift */; };
 		1A7AA3AE25E3C88C007F7288 /* WanAndroidSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AA3AD25E3C88C007F7288 /* WanAndroidSwiftUITests.swift */; };
 		1AD6C14225E51C1000D61CE1 /* WANavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6C14125E51C1000D61CE1 /* WANavigationController.swift */; };
+		1AE657AA25ECED7100E4520F /* MoyaTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6579F25ECED7100E4520F /* MoyaTestViewController.swift */; };
+		1AE657AB25ECED7100E4520F /* AppUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657A025ECED7100E4520F /* AppUpdateModel.swift */; };
+		1AE657AC25ECED7100E4520F /* RMTeamConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657A125ECED7100E4520F /* RMTeamConfig.swift */; };
+		1AE657AD25ECED7100E4520F /* AppUpdateTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657A225ECED7100E4520F /* AppUpdateTargetType.swift */; };
+		1AE657AE25ECED7100E4520F /* NetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657A325ECED7100E4520F /* NetError.swift */; };
+		1AE657AF25ECED7100E4520F /* VLMoyaLogPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657A425ECED7100E4520F /* VLMoyaLogPlugin.swift */; };
+		1AE657B025ECED7100E4520F /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657A525ECED7100E4520F /* Observable+Extension.swift */; };
+		1AE657B125ECED7100E4520F /* VLEncryptResponsePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657A625ECED7100E4520F /* VLEncryptResponsePlugin.swift */; };
+		1AE657B225ECED7100E4520F /* VLTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657A725ECED7100E4520F /* VLTargetType.swift */; };
+		1AE657B325ECED7100E4520F /* NetwokManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657A825ECED7100E4520F /* NetwokManager.swift */; };
+		1AE657B425ECED7100E4520F /* VLNetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657A925ECED7100E4520F /* VLNetConstants.swift */; };
+		1AE657D125ECEE1B00E4520F /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657BA25ECEE1B00E4520F /* ArrayExtension.swift */; };
+		1AE657D225ECEE1B00E4520F /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657BB25ECEE1B00E4520F /* String-Extension.swift */; };
+		1AE657D325ECEE1B00E4520F /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657BC25ECEE1B00E4520F /* DictionaryExtension.swift */; };
+		1AE657D425ECEE1B00E4520F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657BD25ECEE1B00E4520F /* DateExtension.swift */; };
+		1AE657D525ECEE1B00E4520F /* NSArray-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657BF25ECEE1B00E4520F /* NSArray-Extension.swift */; };
+		1AE657D625ECEE1B00E4520F /* NSObject-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657C025ECEE1B00E4520F /* NSObject-Extension.swift */; };
+		1AE657D725ECEE1B00E4520F /* UIImageView-Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657C125ECEE1B00E4520F /* UIImageView-Kingfisher.swift */; };
+		1AE657D825ECEE1B00E4520F /* UILabel-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657C225ECEE1B00E4520F /* UILabel-Extension.swift */; };
+		1AE657D925ECEE1B00E4520F /* NSStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657C325ECEE1B00E4520F /* NSStringExtension.swift */; };
+		1AE657DA25ECEE1B00E4520F /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657C425ECEE1B00E4520F /* UIDevice-Extension.swift */; };
+		1AE657DB25ECEE1B00E4520F /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657C525ECEE1B00E4520F /* UIColor-Extension.swift */; };
+		1AE657DC25ECEE1B00E4520F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657C625ECEE1B00E4520F /* UIViewExtension.swift */; };
+		1AE657DD25ECEE1B00E4520F /* NSDictionary-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657C725ECEE1B00E4520F /* NSDictionary-Extension.swift */; };
+		1AE657DE25ECEE1B00E4520F /* UIStackView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657C825ECEE1B00E4520F /* UIStackView-Extension.swift */; };
+		1AE657DF25ECEE1B00E4520F /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657C925ECEE1B00E4520F /* UIImageExtension.swift */; };
+		1AE657E025ECEE1B00E4520F /* NSNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657CA25ECEE1B00E4520F /* NSNumberExtension.swift */; };
+		1AE657E125ECEE1B00E4520F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657CC25ECEE1B00E4520F /* Global.swift */; };
+		1AE657E225ECEE1B00E4520F /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657CD25ECEE1B00E4520F /* URLConstants.swift */; };
+		1AE657E325ECEE1B00E4520F /* MemsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657CF25ECEE1B00E4520F /* MemsTest.swift */; };
+		1AE657E425ECEE1B00E4520F /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657D025ECEE1B00E4520F /* Mems.swift */; };
+		1AE657EA25ECEEAE00E4520F /* EffectKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657E925ECEEAE00E4520F /* EffectKit.swift */; };
+		1AE657F225ECEED900E4520F /* RegexKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657F125ECEED900E4520F /* RegexKit.swift */; };
+		1AE657F725ECEF2B00E4520F /* TextKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657F625ECEF2B00E4520F /* TextKit.swift */; };
+		1AE657FC25ECEF5B00E4520F /* UITableViewKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657FB25ECEF5B00E4520F /* UITableViewKit.swift */; };
+		1AE6580125ECEF8300E4520F /* UIViewKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6580025ECEF8300E4520F /* UIViewKit.swift */; };
+		1AE6580625ECEFBF00E4520F /* LoggerKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6580525ECEFBF00E4520F /* LoggerKit.swift */; };
+		1AE6580B25ECF01C00E4520F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6580A25ECF01C00E4520F /* Utility.swift */; };
+		1AE6581125ECF25700E4520F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6581025ECF25700E4520F /* HomeViewController.swift */; };
+		1AE6581725ECF4A700E4520F /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6581625ECF4A700E4520F /* TreeViewController.swift */; };
+		1AE6581D25ECF68D00E4520F /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6581C25ECF68D00E4520F /* ProjectViewController.swift */; };
+		1AE6582325ECF6BA00E4520F /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6582225ECF6BA00E4520F /* MineViewController.swift */; };
+		3F5DB977225762D27775E742 /* Pods_WanAndroidSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E255B2BD397923F11EDD2 /* Pods_WanAndroidSwiftTests.framework */; };
+		47AC12BC940AF6AFF62C41A5 /* Pods_WanAndroidSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030E3B0EF6E9D6CC38214250 /* Pods_WanAndroidSwift.framework */; };
+		979FE97BFAFEB7D0CBE9592F /* Pods_WanAndroidSwift_WanAndroidSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209BAE2F8065DC68ECE2A342 /* Pods_WanAndroidSwift_WanAndroidSwiftUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +82,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		030E3B0EF6E9D6CC38214250 /* Pods_WanAndroidSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanAndroidSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A0AE9F69462E7A9C0E10A03 /* Pods-WanAndroidSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwiftTests/Pods-WanAndroidSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		18AAD41F11AEF1FEACB01EA7 /* Pods-WanAndroidSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwift.debug.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwift/Pods-WanAndroidSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		1A15086CA3922EFC38211F6D /* Pods-WanAndroidSwift-WanAndroidSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwift-WanAndroidSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwift-WanAndroidSwiftUITests/Pods-WanAndroidSwift-WanAndroidSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1A671FCD25E7A102002CAA01 /* WATabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WATabBarController.swift; sourceTree = "<group>"; };
 		1A671FEA25E7B2DD002CAA01 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1A7AA38825E3C88B007F7288 /* WanAndroidSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WanAndroidSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +102,53 @@
 		1A7AA3AD25E3C88C007F7288 /* WanAndroidSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanAndroidSwiftUITests.swift; sourceTree = "<group>"; };
 		1A7AA3AF25E3C88C007F7288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD6C14125E51C1000D61CE1 /* WANavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WANavigationController.swift; sourceTree = "<group>"; };
+		1AE6579F25ECED7100E4520F /* MoyaTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaTestViewController.swift; sourceTree = "<group>"; };
+		1AE657A025ECED7100E4520F /* AppUpdateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUpdateModel.swift; sourceTree = "<group>"; };
+		1AE657A125ECED7100E4520F /* RMTeamConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMTeamConfig.swift; sourceTree = "<group>"; };
+		1AE657A225ECED7100E4520F /* AppUpdateTargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUpdateTargetType.swift; sourceTree = "<group>"; };
+		1AE657A325ECED7100E4520F /* NetError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetError.swift; sourceTree = "<group>"; };
+		1AE657A425ECED7100E4520F /* VLMoyaLogPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLMoyaLogPlugin.swift; sourceTree = "<group>"; };
+		1AE657A525ECED7100E4520F /* Observable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
+		1AE657A625ECED7100E4520F /* VLEncryptResponsePlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLEncryptResponsePlugin.swift; sourceTree = "<group>"; };
+		1AE657A725ECED7100E4520F /* VLTargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLTargetType.swift; sourceTree = "<group>"; };
+		1AE657A825ECED7100E4520F /* NetwokManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetwokManager.swift; sourceTree = "<group>"; };
+		1AE657A925ECED7100E4520F /* VLNetConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLNetConstants.swift; sourceTree = "<group>"; };
+		1AE657BA25ECEE1B00E4520F /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		1AE657BB25ECEE1B00E4520F /* String-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
+		1AE657BC25ECEE1B00E4520F /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		1AE657BD25ECEE1B00E4520F /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		1AE657BF25ECEE1B00E4520F /* NSArray-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSArray-Extension.swift"; sourceTree = "<group>"; };
+		1AE657C025ECEE1B00E4520F /* NSObject-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject-Extension.swift"; sourceTree = "<group>"; };
+		1AE657C125ECEE1B00E4520F /* UIImageView-Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView-Kingfisher.swift"; sourceTree = "<group>"; };
+		1AE657C225ECEE1B00E4520F /* UILabel-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel-Extension.swift"; sourceTree = "<group>"; };
+		1AE657C325ECEE1B00E4520F /* NSStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSStringExtension.swift; sourceTree = "<group>"; };
+		1AE657C425ECEE1B00E4520F /* UIDevice-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice-Extension.swift"; sourceTree = "<group>"; };
+		1AE657C525ECEE1B00E4520F /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		1AE657C625ECEE1B00E4520F /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		1AE657C725ECEE1B00E4520F /* NSDictionary-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary-Extension.swift"; sourceTree = "<group>"; };
+		1AE657C825ECEE1B00E4520F /* UIStackView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView-Extension.swift"; sourceTree = "<group>"; };
+		1AE657C925ECEE1B00E4520F /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		1AE657CA25ECEE1B00E4520F /* NSNumberExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberExtension.swift; sourceTree = "<group>"; };
+		1AE657CC25ECEE1B00E4520F /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		1AE657CD25ECEE1B00E4520F /* URLConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		1AE657CF25ECEE1B00E4520F /* MemsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemsTest.swift; sourceTree = "<group>"; };
+		1AE657D025ECEE1B00E4520F /* Mems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mems.swift; sourceTree = "<group>"; };
+		1AE657E925ECEEAE00E4520F /* EffectKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectKit.swift; sourceTree = "<group>"; };
+		1AE657F125ECEED900E4520F /* RegexKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexKit.swift; sourceTree = "<group>"; };
+		1AE657F625ECEF2B00E4520F /* TextKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextKit.swift; sourceTree = "<group>"; };
+		1AE657FB25ECEF5B00E4520F /* UITableViewKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewKit.swift; sourceTree = "<group>"; };
+		1AE6580025ECEF8300E4520F /* UIViewKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewKit.swift; sourceTree = "<group>"; };
+		1AE6580525ECEFBF00E4520F /* LoggerKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerKit.swift; sourceTree = "<group>"; };
+		1AE6580A25ECF01C00E4520F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		1AE6581025ECF25700E4520F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1AE6581625ECF4A700E4520F /* TreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeViewController.swift; sourceTree = "<group>"; };
+		1AE6581C25ECF68D00E4520F /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		1AE6582225ECF6BA00E4520F /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		209BAE2F8065DC68ECE2A342 /* Pods_WanAndroidSwift_WanAndroidSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanAndroidSwift_WanAndroidSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73771C9E735A2BA91614E5BE /* Pods-WanAndroidSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwift.release.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwift/Pods-WanAndroidSwift.release.xcconfig"; sourceTree = "<group>"; };
+		9D4E255B2BD397923F11EDD2 /* Pods_WanAndroidSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanAndroidSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5FFC96B3FEDBA0333346D1A /* Pods-WanAndroidSwift-WanAndroidSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwift-WanAndroidSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwift-WanAndroidSwiftUITests/Pods-WanAndroidSwift-WanAndroidSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D417FB4038A3DFD67B6D24DB /* Pods-WanAndroidSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwiftTests.release.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwiftTests/Pods-WanAndroidSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47AC12BC940AF6AFF62C41A5 /* Pods_WanAndroidSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F5DB977225762D27775E742 /* Pods_WanAndroidSwiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				979FE97BFAFEB7D0CBE9592F /* Pods_WanAndroidSwift_WanAndroidSwiftUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +194,8 @@
 				1A7AA3A125E3C88C007F7288 /* WanAndroidSwiftTests */,
 				1A7AA3AC25E3C88C007F7288 /* WanAndroidSwiftUITests */,
 				1A7AA38925E3C88B007F7288 /* Products */,
+				B9E63948EADFC35365E99706 /* Pods */,
+				E1E504CCD7B4111B2B0936EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +252,11 @@
 		1AD6C13E25E519A000D61CE1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1AE657E825ECEE2600E4520F /* VLKits */,
+				1AE657B825ECEE1B00E4520F /* Extension */,
+				1AE657CB25ECEE1B00E4520F /* Global */,
+				1AE657CE25ECEE1B00E4520F /* Memory */,
+				1AE6579D25ECED7100E4520F /* Moya */,
 				1A671FE925E7B2D2002CAA01 /* Base */,
 			);
 			path = Core;
@@ -159,6 +265,10 @@
 		1AD6C13F25E519A400D61CE1 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				1AE6582125ECF6AD00E4520F /* Mine */,
+				1AE6581B25ECF65C00E4520F /* Project */,
+				1AE6581525ECF49A00E4520F /* Tree */,
+				1AE6580F25ECF24B00E4520F /* Home */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -174,6 +284,158 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		1AE6579D25ECED7100E4520F /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				1AE6579E25ECED7100E4520F /* Test */,
+				1AE657A325ECED7100E4520F /* NetError.swift */,
+				1AE657A425ECED7100E4520F /* VLMoyaLogPlugin.swift */,
+				1AE657A525ECED7100E4520F /* Observable+Extension.swift */,
+				1AE657A625ECED7100E4520F /* VLEncryptResponsePlugin.swift */,
+				1AE657A725ECED7100E4520F /* VLTargetType.swift */,
+				1AE657A825ECED7100E4520F /* NetwokManager.swift */,
+				1AE657A925ECED7100E4520F /* VLNetConstants.swift */,
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
+		1AE6579E25ECED7100E4520F /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				1AE6579F25ECED7100E4520F /* MoyaTestViewController.swift */,
+				1AE657A025ECED7100E4520F /* AppUpdateModel.swift */,
+				1AE657A125ECED7100E4520F /* RMTeamConfig.swift */,
+				1AE657A225ECED7100E4520F /* AppUpdateTargetType.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		1AE657B825ECEE1B00E4520F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1AE657B925ECEE1B00E4520F /* Swift */,
+				1AE657BE25ECEE1B00E4520F /* Objective-C */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1AE657B925ECEE1B00E4520F /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				1AE657BA25ECEE1B00E4520F /* ArrayExtension.swift */,
+				1AE657BB25ECEE1B00E4520F /* String-Extension.swift */,
+				1AE657BC25ECEE1B00E4520F /* DictionaryExtension.swift */,
+				1AE657BD25ECEE1B00E4520F /* DateExtension.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		1AE657BE25ECEE1B00E4520F /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				1AE657BF25ECEE1B00E4520F /* NSArray-Extension.swift */,
+				1AE657C025ECEE1B00E4520F /* NSObject-Extension.swift */,
+				1AE657C125ECEE1B00E4520F /* UIImageView-Kingfisher.swift */,
+				1AE657C225ECEE1B00E4520F /* UILabel-Extension.swift */,
+				1AE657C325ECEE1B00E4520F /* NSStringExtension.swift */,
+				1AE657C425ECEE1B00E4520F /* UIDevice-Extension.swift */,
+				1AE657C525ECEE1B00E4520F /* UIColor-Extension.swift */,
+				1AE657C625ECEE1B00E4520F /* UIViewExtension.swift */,
+				1AE657C725ECEE1B00E4520F /* NSDictionary-Extension.swift */,
+				1AE657C825ECEE1B00E4520F /* UIStackView-Extension.swift */,
+				1AE657C925ECEE1B00E4520F /* UIImageExtension.swift */,
+				1AE657CA25ECEE1B00E4520F /* NSNumberExtension.swift */,
+			);
+			path = "Objective-C";
+			sourceTree = "<group>";
+		};
+		1AE657CB25ECEE1B00E4520F /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				1AE657CC25ECEE1B00E4520F /* Global.swift */,
+				1AE657CD25ECEE1B00E4520F /* URLConstants.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		1AE657CE25ECEE1B00E4520F /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				1AE657CF25ECEE1B00E4520F /* MemsTest.swift */,
+				1AE657D025ECEE1B00E4520F /* Mems.swift */,
+			);
+			path = Memory;
+			sourceTree = "<group>";
+		};
+		1AE657E825ECEE2600E4520F /* VLKits */ = {
+			isa = PBXGroup;
+			children = (
+				1AE657E925ECEEAE00E4520F /* EffectKit.swift */,
+				1AE657F125ECEED900E4520F /* RegexKit.swift */,
+				1AE657F625ECEF2B00E4520F /* TextKit.swift */,
+				1AE657FB25ECEF5B00E4520F /* UITableViewKit.swift */,
+				1AE6580025ECEF8300E4520F /* UIViewKit.swift */,
+				1AE6580525ECEFBF00E4520F /* LoggerKit.swift */,
+				1AE6580A25ECF01C00E4520F /* Utility.swift */,
+			);
+			path = VLKits;
+			sourceTree = "<group>";
+		};
+		1AE6580F25ECF24B00E4520F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1AE6581025ECF25700E4520F /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1AE6581525ECF49A00E4520F /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				1AE6581625ECF4A700E4520F /* TreeViewController.swift */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
+		1AE6581B25ECF65C00E4520F /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				1AE6581C25ECF68D00E4520F /* ProjectViewController.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		1AE6582125ECF6AD00E4520F /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				1AE6582225ECF6BA00E4520F /* MineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		B9E63948EADFC35365E99706 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18AAD41F11AEF1FEACB01EA7 /* Pods-WanAndroidSwift.debug.xcconfig */,
+				73771C9E735A2BA91614E5BE /* Pods-WanAndroidSwift.release.xcconfig */,
+				B5FFC96B3FEDBA0333346D1A /* Pods-WanAndroidSwift-WanAndroidSwiftUITests.debug.xcconfig */,
+				1A15086CA3922EFC38211F6D /* Pods-WanAndroidSwift-WanAndroidSwiftUITests.release.xcconfig */,
+				0A0AE9F69462E7A9C0E10A03 /* Pods-WanAndroidSwiftTests.debug.xcconfig */,
+				D417FB4038A3DFD67B6D24DB /* Pods-WanAndroidSwiftTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E1E504CCD7B4111B2B0936EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				030E3B0EF6E9D6CC38214250 /* Pods_WanAndroidSwift.framework */,
+				209BAE2F8065DC68ECE2A342 /* Pods_WanAndroidSwift_WanAndroidSwiftUITests.framework */,
+				9D4E255B2BD397923F11EDD2 /* Pods_WanAndroidSwiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,9 +443,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A7AA3B225E3C88C007F7288 /* Build configuration list for PBXNativeTarget "WanAndroidSwift" */;
 			buildPhases = (
+				B7D5D568BEFDD56626E85434 /* [CP] Check Pods Manifest.lock */,
 				1A7AA38425E3C88B007F7288 /* Sources */,
 				1A7AA38525E3C88B007F7288 /* Frameworks */,
 				1A7AA38625E3C88B007F7288 /* Resources */,
+				4A7BEA12765FBED3045C8432 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +462,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A7AA3B525E3C88C007F7288 /* Build configuration list for PBXNativeTarget "WanAndroidSwiftTests" */;
 			buildPhases = (
+				75E697EBC491EEA35A3E03EC /* [CP] Check Pods Manifest.lock */,
 				1A7AA39A25E3C88C007F7288 /* Sources */,
 				1A7AA39B25E3C88C007F7288 /* Frameworks */,
 				1A7AA39C25E3C88C007F7288 /* Resources */,
@@ -216,9 +481,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A7AA3B825E3C88C007F7288 /* Build configuration list for PBXNativeTarget "WanAndroidSwiftUITests" */;
 			buildPhases = (
+				ADC026F65470CD01614A5E85 /* [CP] Check Pods Manifest.lock */,
 				1A7AA3A525E3C88C007F7288 /* Sources */,
 				1A7AA3A625E3C88C007F7288 /* Frameworks */,
 				1A7AA3A725E3C88C007F7288 /* Resources */,
+				4E0E4A2482E16E12AE85D67A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,16 +566,161 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4A7BEA12765FBED3045C8432 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WanAndroidSwift/Pods-WanAndroidSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WanAndroidSwift/Pods-WanAndroidSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WanAndroidSwift/Pods-WanAndroidSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E0E4A2482E16E12AE85D67A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WanAndroidSwift-WanAndroidSwiftUITests/Pods-WanAndroidSwift-WanAndroidSwiftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WanAndroidSwift-WanAndroidSwiftUITests/Pods-WanAndroidSwift-WanAndroidSwiftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WanAndroidSwift-WanAndroidSwiftUITests/Pods-WanAndroidSwift-WanAndroidSwiftUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75E697EBC491EEA35A3E03EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WanAndroidSwiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADC026F65470CD01614A5E85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WanAndroidSwift-WanAndroidSwiftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7D5D568BEFDD56626E85434 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WanAndroidSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1A7AA38425E3C88B007F7288 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE657FC25ECEF5B00E4520F /* UITableViewKit.swift in Sources */,
+				1AE6580125ECEF8300E4520F /* UIViewKit.swift in Sources */,
+				1AE657B125ECED7100E4520F /* VLEncryptResponsePlugin.swift in Sources */,
+				1AE657D425ECEE1B00E4520F /* DateExtension.swift in Sources */,
+				1AE6580625ECEFBF00E4520F /* LoggerKit.swift in Sources */,
+				1AE657D125ECEE1B00E4520F /* ArrayExtension.swift in Sources */,
+				1AE657E225ECEE1B00E4520F /* URLConstants.swift in Sources */,
+				1AE6581125ECF25700E4520F /* HomeViewController.swift in Sources */,
+				1AE657D925ECEE1B00E4520F /* NSStringExtension.swift in Sources */,
+				1AE657E325ECEE1B00E4520F /* MemsTest.swift in Sources */,
+				1AE657DB25ECEE1B00E4520F /* UIColor-Extension.swift in Sources */,
 				1A671FEB25E7B2DD002CAA01 /* BaseViewController.swift in Sources */,
+				1AE6580B25ECF01C00E4520F /* Utility.swift in Sources */,
+				1AE657AC25ECED7100E4520F /* RMTeamConfig.swift in Sources */,
+				1AE657F725ECEF2B00E4520F /* TextKit.swift in Sources */,
+				1AE657AE25ECED7100E4520F /* NetError.swift in Sources */,
 				1A7AA38C25E3C88B007F7288 /* AppDelegate.swift in Sources */,
+				1AE657B425ECED7100E4520F /* VLNetConstants.swift in Sources */,
 				1A7AA38E25E3C88B007F7288 /* SceneDelegate.swift in Sources */,
+				1AE657D225ECEE1B00E4520F /* String-Extension.swift in Sources */,
+				1AE657D525ECEE1B00E4520F /* NSArray-Extension.swift in Sources */,
+				1AE657E425ECEE1B00E4520F /* Mems.swift in Sources */,
+				1AE657F225ECEED900E4520F /* RegexKit.swift in Sources */,
+				1AE657AD25ECED7100E4520F /* AppUpdateTargetType.swift in Sources */,
+				1AE657B025ECED7100E4520F /* Observable+Extension.swift in Sources */,
+				1AE6582325ECF6BA00E4520F /* MineViewController.swift in Sources */,
+				1AE657D625ECEE1B00E4520F /* NSObject-Extension.swift in Sources */,
+				1AE6581D25ECF68D00E4520F /* ProjectViewController.swift in Sources */,
+				1AE657D725ECEE1B00E4520F /* UIImageView-Kingfisher.swift in Sources */,
+				1AE657E125ECEE1B00E4520F /* Global.swift in Sources */,
+				1AE657B225ECED7100E4520F /* VLTargetType.swift in Sources */,
+				1AE657DC25ECEE1B00E4520F /* UIViewExtension.swift in Sources */,
+				1AE657DA25ECEE1B00E4520F /* UIDevice-Extension.swift in Sources */,
 				1AD6C14225E51C1000D61CE1 /* WANavigationController.swift in Sources */,
+				1AE657B325ECED7100E4520F /* NetwokManager.swift in Sources */,
+				1AE657D825ECEE1B00E4520F /* UILabel-Extension.swift in Sources */,
+				1AE657DD25ECEE1B00E4520F /* NSDictionary-Extension.swift in Sources */,
+				1AE657AB25ECED7100E4520F /* AppUpdateModel.swift in Sources */,
+				1AE657E025ECEE1B00E4520F /* NSNumberExtension.swift in Sources */,
+				1AE6581725ECF4A700E4520F /* TreeViewController.swift in Sources */,
+				1AE657DE25ECEE1B00E4520F /* UIStackView-Extension.swift in Sources */,
+				1AE657D325ECEE1B00E4520F /* DictionaryExtension.swift in Sources */,
+				1AE657AF25ECED7100E4520F /* VLMoyaLogPlugin.swift in Sources */,
+				1AE657AA25ECED7100E4520F /* MoyaTestViewController.swift in Sources */,
 				1A671FCE25E7A102002CAA01 /* WATabBarController.swift in Sources */,
+				1AE657EA25ECEEAE00E4520F /* EffectKit.swift in Sources */,
+				1AE657DF25ECEE1B00E4520F /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,12 +893,13 @@
 		};
 		1A7AA3B325E3C88C007F7288 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18AAD41F11AEF1FEACB01EA7 /* Pods-WanAndroidSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F275H39946;
-				INFOPLIST_FILE = WanAndroidSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WanAndroidSwift/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -501,12 +914,13 @@
 		};
 		1A7AA3B425E3C88C007F7288 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73771C9E735A2BA91614E5BE /* Pods-WanAndroidSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F275H39946;
-				INFOPLIST_FILE = WanAndroidSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WanAndroidSwift/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -521,6 +935,7 @@
 		};
 		1A7AA3B625E3C88C007F7288 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A0AE9F69462E7A9C0E10A03 /* Pods-WanAndroidSwiftTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -543,6 +958,7 @@
 		};
 		1A7AA3B725E3C88C007F7288 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D417FB4038A3DFD67B6D24DB /* Pods-WanAndroidSwiftTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -565,6 +981,7 @@
 		};
 		1A7AA3B925E3C88C007F7288 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5FFC96B3FEDBA0333346D1A /* Pods-WanAndroidSwift-WanAndroidSwiftUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -585,6 +1002,7 @@
 		};
 		1A7AA3BA25E3C88C007F7288 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A15086CA3922EFC38211F6D /* Pods-WanAndroidSwift-WanAndroidSwiftUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,244 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+target 'WanAndroidSwift' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for WanAndroidSwift
+  ### NET
+  
+  ## Network
+  pod 'Kingfisher', '~> 6.0'
+#  pod 'Alamofire', '~> 5.2'
+#  pod 'CTNetworkingSwift'    # 已包含 Alamofire
+#  pod 'Moya', '~> 14.0'                # 已包含 Alamofire
+  ## or
+   pod 'Moya/RxSwift', '~> 14.0'
+  ## or
+  # pod 'Moya/ReactiveSwift', '~> 14.0'
+  #  pod 'ReachabilitySwift'
+  # pod 'Result', '~> 5.0'
+  
+  ## Future
+#  pod 'Then'
+#  pod 'PromiseKit', '~> 6.8'
+  #pod 'BrightFutures'
+  #pod 'thenPromise'
+  #pod 'AwaitKit', '~> 5.2.0'
+  #pod 'Promises'
+  
+  
+  ## JSON
+  pod 'SwiftyJSON'
+  pod 'HandyJSON', '~> 5.0.1'
+#  pod 'KakaJSON', '~> 1.1.2'
+#  pod 'ObjectMapper'
+#  pod 'AlamofireObjectMapper'
+#  pod "Codextended"
+
+
+
+  
+  
+  ### Utilities
+  
+  ## ToolKits
+  pod 'DeviceKit', '~> 4.0'
+  pod 'UIColor_Hex_Swift', '~> 5.1.0'
+  pod 'DynamicColor', '~> 5.0.0'
+  #  pod 'SwiftyUserDefaults', '~> 4.0'
+  #pod 'SwiftTheme'
+  # pod 'Texture'
+  ## SwifterSwift is a collection of over 500 native Swift extensions, with handy methods, syntactic sugar, and performance improvements for wide range of primitive data types, UIKit and Cocoa classes –over 500 in 1– for iOS, macOS, tvOS and watchOS.
+  ## Please keep one line from the following lines:
+  pod 'SwifterSwift'               # All Extensions
+#  pod 'SwifterSwift/SwiftStdlib'   # Standard Library Extensions
+#  pod 'SwifterSwift/Foundation'    # Foundation Extensions
+#  pod 'SwifterSwift/UIKit'         # UIKit Extensions
+#  pod 'SwifterSwift/Cocoa'         # Cocoa Extensions
+#  pod 'SwifterSwift/MapKit'        # MapKit Extensions
+#  pod 'SwifterSwift/CoreGraphics'  # CoreGraphics Extensions
+#  pod 'SwifterSwift/CoreLocation'  # CoreLocation Extensions
+#  pod 'SwifterSwift/SpriteKit'   # SpriteKit Extensions
+#  pod 'SwifterSwift/Dispatch'       # Dispatch Extensions
+  
+  
+  ## Animation
+  #pod 'IBAnimatable'
+  # pod 'lottie-ios'
+  
+  
+  ## autocompleted resources
+  pod 'R.swift'
+  #  pod 'SwiftLint'
+  #  pod 'DKImagePickerController'
+  
+  
+  ## ReactiveX
+   # pod 'RxSwift', '~> 6'
+   # pod 'RxCocoa', '~> 6'
+   # pod 'RxDataSources', '~> 4.0'
+   # pod 'RxSwiftExt', '~> 5'
+   # # This will install both the RxSwift and RxCocoa extensions. If you're interested in only installing the RxSwift extensions, without the RxCocoa extensions, simply use:
+   # pod 'RxSwiftExt/Core'
+   # pod 'RxKeyboard'
+   # pod "RxSwiftUtilities"
+   # pod "RxViewModel"
+  
+  
+  ## RAC
+  #  pod 'ReactiveCocoa', '~> 9.0'
+  
+  
+  ## Database
+    #pod 'SQLite.swift'
+    # Local file
+  #  pod 'MMKV'
+  
+  
+  ## Keychain store 存储
+    # pod 'KeychainAccess'
+    # pod 'KeychainSwift'
+    #  pod '1PasswordExtension'
+    
+    
+  ## Encrypt
+    # pod 'CryptoSwift'
+    # RSA加密
+    # pod 'SwiftyRSA'
+   
+    
+  ## Logger
+  #  pod 'XCGLogger', '~> 7.0.0'
+  #  pod 'PrintBeautifulLog'
+  
+  
+  ## Aviod keyboard block view
+  pod 'IQKeyboardManagerSwift', '6.3.0'
+  
+  
+  ## In App Purchases
+  #  pod 'SwiftyStoreKit'
+  
+  ## Swift code format
+  # pod 'SwiftFormat/CLI'
+  
+  ## Store
+  #pod 'Valet'
+  
+  ## Media
+  #pod 'BMPlayer'
+  
+  ## Navigation
+  pod 'FDFullscreenPopGesture'
+  
+  ## 手势 GestureRecognizer
+  #  pod 'CXSwipeGestureRecognizer'
+  
+  
+  ## Category
+  # pod 'JXCategoryView'
+  
+  ## DebugMan
+  #  pod 'CocoaDebug', :configurations => ['Debug']
+  
+  ## HTML解析
+#  pod 'Kanna'
+#  pod 'Ji'
+  
+  ## 申请权限
+#  pod 'PermissionScope'
+
+  ## 分析  Crashlytics
+  #  pod 'Fabric'
+  #  pod 'Crashlytics'
+
+  
+
+  
+  
+  
+  
+  
+  ### UI
+  
+  ## Constraint&Frame
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'SwiftHandyFrame'
+  
+  
+  ## PullToRefresh
+  pod 'MJRefresh'
+  
+  
+  ## HUD
+  # pod 'MBProgressHUD', '~> 1.1.0'
+  # pod 'SVProgressHUD'
+  pod 'PKHUD', '~> 5.0'  # a swift hud lib
+  #  pod "SwiftSpinner"
+  #  pod "KRProgressHUD"
+  # pod 'Presentr'
+  
+  
+  ## Panel 面板类
+  # pod 'PanModal'
+  
+  
+  ## TableView
+  # pod 'DZNEmptyDataSet'
+  
+  ## iCarousel
+  pod 'iCarousel', '~> 1.8.3'
+  
+  ## TTTAttributedLabel
+  # pod 'ActiveLabel'
+  
+  ## 侧滑
+  #  pod 'ENSwiftSideMenu', '~> 0.1.4'
+  
+  
+  ## QRCode
+  #pod 'QRCodeReader.swift', '~> 10.1.0'
+  
+  ## ZXingObjC
+  # pod 'ZXingObjC', '~> 3.6.5'
+  
+  ## Button
+  #pod 'DynamicButton', '~> 6.2.0'
+  
+ 
+  ## Pager & Banner
+  # pod 'SGPagingView'
+  # pod 'FSPagerView'
+  # pod 'LLCycleScrollView'
+  
+  
+  ## 表格
+  # pod 'iOS-Echarts'
+  
+  ## PhotoBrowser
+  # pod 'SKPhotoBrowser'
+  
+  
+  # JTAppleCalendar
+  # pod 'JTAppleCalendar', '~> 7.1.7'
+  
+
+  ## Toast
+  # pod 'Toast-Swift’, '~> 5.0.1'
+
+
+
+
+
+  target 'WanAndroidSwiftTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'WanAndroidSwiftUITests' do
+    # Pods for testing
+  end
+
+end
