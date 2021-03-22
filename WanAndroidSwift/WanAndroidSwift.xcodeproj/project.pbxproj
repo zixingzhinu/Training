@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1790EA25FA041100B1C728 /* PKHUDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1790E925FA041100B1C728 /* PKHUDExtension.swift */; };
+		1A6396C325EF3B2500DF5B37 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6396C225EF3B2500DF5B37 /* Config.swift */; };
+		1A6396CB25EF3B6C00DF5B37 /* Config+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6396CA25EF3B6C00DF5B37 /* Config+URL.swift */; };
+		1A6396D125EF6D2E00DF5B37 /* HomeDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6396D025EF6D2E00DF5B37 /* HomeDataHandler.swift */; };
+		1A6396D725EF6E6900DF5B37 /* HomeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6396D625EF6E6900DF5B37 /* HomeApi.swift */; };
 		1A671FCE25E7A102002CAA01 /* WATabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A671FCD25E7A102002CAA01 /* WATabBarController.swift */; };
 		1A671FEB25E7B2DD002CAA01 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A671FEA25E7B2DD002CAA01 /* BaseViewController.swift */; };
+		1A6F5A1625F7645C00B1FBEB /* SwiftHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6F5A1525F7645C00B1FBEB /* SwiftHeaders.swift */; };
 		1A7AA38C25E3C88B007F7288 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AA38B25E3C88B007F7288 /* AppDelegate.swift */; };
 		1A7AA38E25E3C88B007F7288 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AA38D25E3C88B007F7288 /* SceneDelegate.swift */; };
 		1A7AA39325E3C88B007F7288 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7AA39125E3C88B007F7288 /* Main.storyboard */; };
@@ -16,6 +22,10 @@
 		1A7AA39825E3C88C007F7288 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7AA39625E3C88C007F7288 /* LaunchScreen.storyboard */; };
 		1A7AA3A325E3C88C007F7288 /* WanAndroidSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AA3A225E3C88C007F7288 /* WanAndroidSwiftTests.swift */; };
 		1A7AA3AE25E3C88C007F7288 /* WanAndroidSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AA3AD25E3C88C007F7288 /* WanAndroidSwiftUITests.swift */; };
+		1A80E78D26033C24005BC35A /* HomeTopArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80E78C26033C24005BC35A /* HomeTopArticleModel.swift */; };
+		1A91B8DF25F214F30082582D /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A91B8DE25F214F30082582D /* BaseModel.swift */; };
+		1A91B8E825F2459C0082582D /* HomeBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A91B8E725F2459C0082582D /* HomeBannerModel.swift */; };
+		1ACD03A12608AD2B00FEB4D0 /* AsyncKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD03A02608AD2B00FEB4D0 /* AsyncKit.swift */; };
 		1AD6C14225E51C1000D61CE1 /* WANavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6C14125E51C1000D61CE1 /* WANavigationController.swift */; };
 		1AE657AA25ECED7100E4520F /* MoyaTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6579F25ECED7100E4520F /* MoyaTestViewController.swift */; };
 		1AE657AB25ECED7100E4520F /* AppUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657A025ECED7100E4520F /* AppUpdateModel.swift */; };
@@ -45,7 +55,6 @@
 		1AE657DF25ECEE1B00E4520F /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657C925ECEE1B00E4520F /* UIImageExtension.swift */; };
 		1AE657E025ECEE1B00E4520F /* NSNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657CA25ECEE1B00E4520F /* NSNumberExtension.swift */; };
 		1AE657E125ECEE1B00E4520F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657CC25ECEE1B00E4520F /* Global.swift */; };
-		1AE657E225ECEE1B00E4520F /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657CD25ECEE1B00E4520F /* URLConstants.swift */; };
 		1AE657E325ECEE1B00E4520F /* MemsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657CF25ECEE1B00E4520F /* MemsTest.swift */; };
 		1AE657E425ECEE1B00E4520F /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657D025ECEE1B00E4520F /* Mems.swift */; };
 		1AE657EA25ECEEAE00E4520F /* EffectKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE657E925ECEEAE00E4520F /* EffectKit.swift */; };
@@ -59,6 +68,8 @@
 		1AE6581725ECF4A700E4520F /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6581625ECF4A700E4520F /* TreeViewController.swift */; };
 		1AE6581D25ECF68D00E4520F /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6581C25ECF68D00E4520F /* ProjectViewController.swift */; };
 		1AE6582325ECF6BA00E4520F /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6582225ECF6BA00E4520F /* MineViewController.swift */; };
+		1AE9D94425FF3A6500D7EA0F /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9D94325FF3A6500D7EA0F /* UIImageView+Kingfisher.swift */; };
+		1AFE1101260489FD00B3AD9D /* UITableView+System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE1100260489FD00B3AD9D /* UITableView+System.swift */; };
 		3F5DB977225762D27775E742 /* Pods_WanAndroidSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E255B2BD397923F11EDD2 /* Pods_WanAndroidSwiftTests.framework */; };
 		47AC12BC940AF6AFF62C41A5 /* Pods_WanAndroidSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030E3B0EF6E9D6CC38214250 /* Pods_WanAndroidSwift.framework */; };
 		979FE97BFAFEB7D0CBE9592F /* Pods_WanAndroidSwift_WanAndroidSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209BAE2F8065DC68ECE2A342 /* Pods_WanAndroidSwift_WanAndroidSwiftUITests.framework */; };
@@ -86,8 +97,14 @@
 		0A0AE9F69462E7A9C0E10A03 /* Pods-WanAndroidSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwiftTests/Pods-WanAndroidSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		18AAD41F11AEF1FEACB01EA7 /* Pods-WanAndroidSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwift.debug.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwift/Pods-WanAndroidSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		1A15086CA3922EFC38211F6D /* Pods-WanAndroidSwift-WanAndroidSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwift-WanAndroidSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwift-WanAndroidSwiftUITests/Pods-WanAndroidSwift-WanAndroidSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1A1790E925FA041100B1C728 /* PKHUDExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKHUDExtension.swift; sourceTree = "<group>"; };
+		1A6396C225EF3B2500DF5B37 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		1A6396CA25EF3B6C00DF5B37 /* Config+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+URL.swift"; sourceTree = "<group>"; };
+		1A6396D025EF6D2E00DF5B37 /* HomeDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataHandler.swift; sourceTree = "<group>"; };
+		1A6396D625EF6E6900DF5B37 /* HomeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApi.swift; sourceTree = "<group>"; };
 		1A671FCD25E7A102002CAA01 /* WATabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WATabBarController.swift; sourceTree = "<group>"; };
 		1A671FEA25E7B2DD002CAA01 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1A6F5A1525F7645C00B1FBEB /* SwiftHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHeaders.swift; sourceTree = "<group>"; };
 		1A7AA38825E3C88B007F7288 /* WanAndroidSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WanAndroidSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7AA38B25E3C88B007F7288 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A7AA38D25E3C88B007F7288 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +118,10 @@
 		1A7AA3A925E3C88C007F7288 /* WanAndroidSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WanAndroidSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7AA3AD25E3C88C007F7288 /* WanAndroidSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanAndroidSwiftUITests.swift; sourceTree = "<group>"; };
 		1A7AA3AF25E3C88C007F7288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A80E78C26033C24005BC35A /* HomeTopArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopArticleModel.swift; sourceTree = "<group>"; };
+		1A91B8DE25F214F30082582D /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		1A91B8E725F2459C0082582D /* HomeBannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerModel.swift; sourceTree = "<group>"; };
+		1ACD03A02608AD2B00FEB4D0 /* AsyncKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncKit.swift; sourceTree = "<group>"; };
 		1AD6C14125E51C1000D61CE1 /* WANavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WANavigationController.swift; sourceTree = "<group>"; };
 		1AE6579F25ECED7100E4520F /* MoyaTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaTestViewController.swift; sourceTree = "<group>"; };
 		1AE657A025ECED7100E4520F /* AppUpdateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUpdateModel.swift; sourceTree = "<group>"; };
@@ -130,7 +151,6 @@
 		1AE657C925ECEE1B00E4520F /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		1AE657CA25ECEE1B00E4520F /* NSNumberExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberExtension.swift; sourceTree = "<group>"; };
 		1AE657CC25ECEE1B00E4520F /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		1AE657CD25ECEE1B00E4520F /* URLConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		1AE657CF25ECEE1B00E4520F /* MemsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemsTest.swift; sourceTree = "<group>"; };
 		1AE657D025ECEE1B00E4520F /* Mems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mems.swift; sourceTree = "<group>"; };
 		1AE657E925ECEEAE00E4520F /* EffectKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectKit.swift; sourceTree = "<group>"; };
@@ -144,6 +164,8 @@
 		1AE6581625ECF4A700E4520F /* TreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeViewController.swift; sourceTree = "<group>"; };
 		1AE6581C25ECF68D00E4520F /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		1AE6582225ECF6BA00E4520F /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		1AE9D94325FF3A6500D7EA0F /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		1AFE1100260489FD00B3AD9D /* UITableView+System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+System.swift"; sourceTree = "<group>"; };
 		209BAE2F8065DC68ECE2A342 /* Pods_WanAndroidSwift_WanAndroidSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanAndroidSwift_WanAndroidSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73771C9E735A2BA91614E5BE /* Pods-WanAndroidSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwift.release.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwift/Pods-WanAndroidSwift.release.xcconfig"; sourceTree = "<group>"; };
 		9D4E255B2BD397923F11EDD2 /* Pods_WanAndroidSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanAndroidSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +201,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A63962225EF2FA600DF5B37 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				1A6396D525EF6E5A00DF5B37 /* Home */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		1A6396C125EF3B0700DF5B37 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1A6396C225EF3B2500DF5B37 /* Config.swift */,
+				1A6396CA25EF3B6C00DF5B37 /* Config+URL.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		1A6396CF25EF6D2000DF5B37 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1A6396D025EF6D2E00DF5B37 /* HomeDataHandler.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1A6396D525EF6E5A00DF5B37 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1A6396D625EF6E6900DF5B37 /* HomeApi.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		1A671FE925E7B2D2002CAA01 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,9 +293,28 @@
 			path = WanAndroidSwiftUITests;
 			sourceTree = "<group>";
 		};
+		1A91B8DD25F214E10082582D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A91B8DE25F214F30082582D /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A91B8E625F245830082582D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A91B8E725F2459C0082582D /* HomeBannerModel.swift */,
+				1A80E78C26033C24005BC35A /* HomeTopArticleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1AD6C13D25E5199300D61CE1 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1A91B8DD25F214E10082582D /* Model */,
+				1A6396C125EF3B0700DF5B37 /* Config */,
 				1A7AA38B25E3C88B007F7288 /* AppDelegate.swift */,
 				1A7AA38D25E3C88B007F7288 /* SceneDelegate.swift */,
 				1AD6C14125E51C1000D61CE1 /* WANavigationController.swift */,
@@ -265,6 +339,7 @@
 		1AD6C13F25E519A400D61CE1 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				1A63962225EF2FA600DF5B37 /* Net */,
 				1AE6582125ECF6AD00E4520F /* Mine */,
 				1AE6581B25ECF65C00E4520F /* Project */,
 				1AE6581525ECF49A00E4520F /* Tree */,
@@ -280,6 +355,7 @@
 				1A7AA39625E3C88C007F7288 /* LaunchScreen.storyboard */,
 				1A7AA39125E3C88B007F7288 /* Main.storyboard */,
 				1A7AA39425E3C88C007F7288 /* Assets.xcassets */,
+				1A6F5A1525F7645C00B1FBEB /* SwiftHeaders.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -326,6 +402,9 @@
 				1AE657BB25ECEE1B00E4520F /* String-Extension.swift */,
 				1AE657BC25ECEE1B00E4520F /* DictionaryExtension.swift */,
 				1AE657BD25ECEE1B00E4520F /* DateExtension.swift */,
+				1A1790E925FA041100B1C728 /* PKHUDExtension.swift */,
+				1AE9D94325FF3A6500D7EA0F /* UIImageView+Kingfisher.swift */,
+				1AFE1100260489FD00B3AD9D /* UITableView+System.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -353,7 +432,6 @@
 			isa = PBXGroup;
 			children = (
 				1AE657CC25ECEE1B00E4520F /* Global.swift */,
-				1AE657CD25ECEE1B00E4520F /* URLConstants.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -377,6 +455,7 @@
 				1AE6580025ECEF8300E4520F /* UIViewKit.swift */,
 				1AE6580525ECEFBF00E4520F /* LoggerKit.swift */,
 				1AE6580A25ECF01C00E4520F /* Utility.swift */,
+				1ACD03A02608AD2B00FEB4D0 /* AsyncKit.swift */,
 			);
 			path = VLKits;
 			sourceTree = "<group>";
@@ -384,6 +463,8 @@
 		1AE6580F25ECF24B00E4520F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1A91B8E625F245830082582D /* Model */,
+				1A6396CF25EF6D2000DF5B37 /* Data */,
 				1AE6581025ECF25700E4520F /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -674,22 +755,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A1790EA25FA041100B1C728 /* PKHUDExtension.swift in Sources */,
 				1AE657FC25ECEF5B00E4520F /* UITableViewKit.swift in Sources */,
 				1AE6580125ECEF8300E4520F /* UIViewKit.swift in Sources */,
 				1AE657B125ECED7100E4520F /* VLEncryptResponsePlugin.swift in Sources */,
 				1AE657D425ECEE1B00E4520F /* DateExtension.swift in Sources */,
 				1AE6580625ECEFBF00E4520F /* LoggerKit.swift in Sources */,
 				1AE657D125ECEE1B00E4520F /* ArrayExtension.swift in Sources */,
-				1AE657E225ECEE1B00E4520F /* URLConstants.swift in Sources */,
 				1AE6581125ECF25700E4520F /* HomeViewController.swift in Sources */,
 				1AE657D925ECEE1B00E4520F /* NSStringExtension.swift in Sources */,
 				1AE657E325ECEE1B00E4520F /* MemsTest.swift in Sources */,
 				1AE657DB25ECEE1B00E4520F /* UIColor-Extension.swift in Sources */,
 				1A671FEB25E7B2DD002CAA01 /* BaseViewController.swift in Sources */,
 				1AE6580B25ECF01C00E4520F /* Utility.swift in Sources */,
+				1AFE1101260489FD00B3AD9D /* UITableView+System.swift in Sources */,
 				1AE657AC25ECED7100E4520F /* RMTeamConfig.swift in Sources */,
 				1AE657F725ECEF2B00E4520F /* TextKit.swift in Sources */,
 				1AE657AE25ECED7100E4520F /* NetError.swift in Sources */,
+				1A6396CB25EF3B6C00DF5B37 /* Config+URL.swift in Sources */,
 				1A7AA38C25E3C88B007F7288 /* AppDelegate.swift in Sources */,
 				1AE657B425ECED7100E4520F /* VLNetConstants.swift in Sources */,
 				1A7AA38E25E3C88B007F7288 /* SceneDelegate.swift in Sources */,
@@ -699,7 +782,9 @@
 				1AE657F225ECEED900E4520F /* RegexKit.swift in Sources */,
 				1AE657AD25ECED7100E4520F /* AppUpdateTargetType.swift in Sources */,
 				1AE657B025ECED7100E4520F /* Observable+Extension.swift in Sources */,
+				1A6396D725EF6E6900DF5B37 /* HomeApi.swift in Sources */,
 				1AE6582325ECF6BA00E4520F /* MineViewController.swift in Sources */,
+				1A6396D125EF6D2E00DF5B37 /* HomeDataHandler.swift in Sources */,
 				1AE657D625ECEE1B00E4520F /* NSObject-Extension.swift in Sources */,
 				1AE6581D25ECF68D00E4520F /* ProjectViewController.swift in Sources */,
 				1AE657D725ECEE1B00E4520F /* UIImageView-Kingfisher.swift in Sources */,
@@ -708,17 +793,24 @@
 				1AE657DC25ECEE1B00E4520F /* UIViewExtension.swift in Sources */,
 				1AE657DA25ECEE1B00E4520F /* UIDevice-Extension.swift in Sources */,
 				1AD6C14225E51C1000D61CE1 /* WANavigationController.swift in Sources */,
+				1A80E78D26033C24005BC35A /* HomeTopArticleModel.swift in Sources */,
 				1AE657B325ECED7100E4520F /* NetwokManager.swift in Sources */,
+				1A6F5A1625F7645C00B1FBEB /* SwiftHeaders.swift in Sources */,
 				1AE657D825ECEE1B00E4520F /* UILabel-Extension.swift in Sources */,
+				1A6396C325EF3B2500DF5B37 /* Config.swift in Sources */,
 				1AE657DD25ECEE1B00E4520F /* NSDictionary-Extension.swift in Sources */,
+				1A91B8E825F2459C0082582D /* HomeBannerModel.swift in Sources */,
+				1ACD03A12608AD2B00FEB4D0 /* AsyncKit.swift in Sources */,
 				1AE657AB25ECED7100E4520F /* AppUpdateModel.swift in Sources */,
 				1AE657E025ECEE1B00E4520F /* NSNumberExtension.swift in Sources */,
 				1AE6581725ECF4A700E4520F /* TreeViewController.swift in Sources */,
 				1AE657DE25ECEE1B00E4520F /* UIStackView-Extension.swift in Sources */,
 				1AE657D325ECEE1B00E4520F /* DictionaryExtension.swift in Sources */,
+				1A91B8DF25F214F30082582D /* BaseModel.swift in Sources */,
 				1AE657AF25ECED7100E4520F /* VLMoyaLogPlugin.swift in Sources */,
 				1AE657AA25ECED7100E4520F /* MoyaTestViewController.swift in Sources */,
 				1A671FCE25E7A102002CAA01 /* WATabBarController.swift in Sources */,
+				1AE9D94425FF3A6500D7EA0F /* UIImageView+Kingfisher.swift in Sources */,
 				1AE657EA25ECEEAE00E4520F /* EffectKit.swift in Sources */,
 				1AE657DF25ECEE1B00E4520F /* UIImageExtension.swift in Sources */,
 			);

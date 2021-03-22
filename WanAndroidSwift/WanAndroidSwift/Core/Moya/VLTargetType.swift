@@ -29,7 +29,7 @@ extension VLTargetType {
     }
     
     var baseURL: URL {
-        return URL(string: "")!
+        return URL(string: ConfApi.baseURL)!
     }
     
     var path: String {
@@ -70,12 +70,13 @@ extension VLTargetType {
     
     static var networkActivityPlugin: PluginType {
         NetworkActivityPlugin { (changeType, target) in
-            switch changeType {
-            case .began:
-                UIApplication.shared.isNetworkActivityIndicatorVisible = true
-            case .ended:
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            }
+            // 此处是非UI线程，不能执行UI操作
+//            switch changeType {
+//            case .began:
+//                UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//            case .ended:
+//                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//            }
         }
     }
     
@@ -92,7 +93,8 @@ extension VLTargetType {
     static var weakProvider: Reactive<MoyaProvider<Self>> {
         var plugins:[PluginType] = [networkActivityPlugin]
         #if DEBUG
-        plugins.append(NetworkLoggerPlugin())
+        plugins.append(NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: NetworkLoggerPlugin.Configuration.LogOptions.verbose)))
+//        plugins.append(VLMoyaLogPlugin())
         #endif
         // 加入响应加解密插件
         plugins.append(VLEncryptResponsePlugin())

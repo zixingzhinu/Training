@@ -17,3 +17,6 @@ enum VLNetStatusCode: Int {
 
 /// timeout
 let timeoutIntervalForRequest: TimeInterval = 60
+
+typealias SuccessClosure<M: Decodable> = (M?) -> Void
+typealias FailureClosure = (Error) -> Void

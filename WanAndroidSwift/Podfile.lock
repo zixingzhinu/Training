@@ -3,6 +3,7 @@ PODS:
   - DeviceKit (4.3.0)
   - DynamicColor (5.0.1)
   - FDFullscreenPopGesture (1.1)
+  - FSPagerView (0.8.3)
   - HandyJSON (5.0.2)
   - iCarousel (1.8.3)
   - IQKeyboardManagerSwift (6.3.0)
@@ -52,6 +53,7 @@ DEPENDENCIES:
   - DeviceKit (~> 4.0)
   - DynamicColor (~> 5.0.0)
   - FDFullscreenPopGesture
+  - FSPagerView
   - HandyJSON (~> 5.0.1)
   - iCarousel (~> 1.8.3)
   - IQKeyboardManagerSwift (= 6.3.0)
@@ -72,6 +74,7 @@ SPEC REPOS:
     - DeviceKit
     - DynamicColor
     - FDFullscreenPopGesture
+    - FSPagerView
     - HandyJSON
     - iCarousel
     - IQKeyboardManagerSwift
@@ -93,6 +96,7 @@ SPEC CHECKSUMS:
   DeviceKit: 7decde449c308ac7e816e2184ded1c7c596fb885
   DynamicColor: d049834ef86d8ecf150b0ca1ebe54ee733a0ec22
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
@@ -109,6 +113,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
 
-PODFILE CHECKSUM: cbdce35481d4618053e0f084076e290a7d8b46d3
+PODFILE CHECKSUM: 8dc1fe29399246ed26eeb2598151b64093683d73
 
 COCOAPODS: 1.10.1

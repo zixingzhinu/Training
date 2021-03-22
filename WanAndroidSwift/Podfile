@@ -168,6 +168,10 @@ target 'WanAndroidSwift' do
   pod 'SwiftHandyFrame'
   
   
+  ## WebView & JS
+  pod 'WKWebViewJavascriptBridge', '~> 1.2.0'
+  
+  
   ## PullToRefresh
   pod 'MJRefresh'
   
@@ -210,7 +214,7 @@ target 'WanAndroidSwift' do
  
   ## Pager & Banner
   # pod 'SGPagingView'
-  # pod 'FSPagerView'
+  pod 'FSPagerView'
   # pod 'LLCycleScrollView'
   
   
