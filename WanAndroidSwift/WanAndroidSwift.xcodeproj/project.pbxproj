@@ -69,6 +69,8 @@
 		1AE6581D25ECF68D00E4520F /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6581C25ECF68D00E4520F /* ProjectViewController.swift */; };
 		1AE6582325ECF6BA00E4520F /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6582225ECF6BA00E4520F /* MineViewController.swift */; };
 		1AE9D94425FF3A6500D7EA0F /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9D94325FF3A6500D7EA0F /* UIImageView+Kingfisher.swift */; };
+		1AF8F7BB26118734005CFE80 /* HomeArticleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8F7BA26118734005CFE80 /* HomeArticleListModel.swift */; };
+		1AF8F7FC2611E61F005CFE80 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8F7FB2611E61F005CFE80 /* HomeTableViewCell.swift */; };
 		1AFE1101260489FD00B3AD9D /* UITableView+System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE1100260489FD00B3AD9D /* UITableView+System.swift */; };
 		3F5DB977225762D27775E742 /* Pods_WanAndroidSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E255B2BD397923F11EDD2 /* Pods_WanAndroidSwiftTests.framework */; };
 		47AC12BC940AF6AFF62C41A5 /* Pods_WanAndroidSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030E3B0EF6E9D6CC38214250 /* Pods_WanAndroidSwift.framework */; };
@@ -165,6 +167,8 @@
 		1AE6581C25ECF68D00E4520F /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		1AE6582225ECF6BA00E4520F /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		1AE9D94325FF3A6500D7EA0F /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		1AF8F7BA26118734005CFE80 /* HomeArticleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeArticleListModel.swift; sourceTree = "<group>"; };
+		1AF8F7FB2611E61F005CFE80 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		1AFE1100260489FD00B3AD9D /* UITableView+System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+System.swift"; sourceTree = "<group>"; };
 		209BAE2F8065DC68ECE2A342 /* Pods_WanAndroidSwift_WanAndroidSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanAndroidSwift_WanAndroidSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73771C9E735A2BA91614E5BE /* Pods-WanAndroidSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwift.release.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwift/Pods-WanAndroidSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 			children = (
 				1A91B8E725F2459C0082582D /* HomeBannerModel.swift */,
 				1A80E78C26033C24005BC35A /* HomeTopArticleModel.swift */,
+				1AF8F7BA26118734005CFE80 /* HomeArticleListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 		1AE6580F25ECF24B00E4520F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1AF8F7FA2611E604005CFE80 /* View */,
 				1A91B8E625F245830082582D /* Model */,
 				1A6396CF25EF6D2000DF5B37 /* Data */,
 				1AE6581025ECF25700E4520F /* HomeViewController.swift */,
@@ -492,6 +498,14 @@
 				1AE6582225ECF6BA00E4520F /* MineViewController.swift */,
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		1AF8F7FA2611E604005CFE80 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1AF8F7FB2611E61F005CFE80 /* HomeTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B9E63948EADFC35365E99706 /* Pods */ = {
@@ -761,6 +775,8 @@
 				1AE657B125ECED7100E4520F /* VLEncryptResponsePlugin.swift in Sources */,
 				1AE657D425ECEE1B00E4520F /* DateExtension.swift in Sources */,
 				1AE6580625ECEFBF00E4520F /* LoggerKit.swift in Sources */,
+				1AF8F7FC2611E61F005CFE80 /* HomeTableViewCell.swift in Sources */,
+				1AF8F7BB26118734005CFE80 /* HomeArticleListModel.swift in Sources */,
 				1AE657D125ECEE1B00E4520F /* ArrayExtension.swift in Sources */,
 				1AE6581125ECF25700E4520F /* HomeViewController.swift in Sources */,
 				1AE657D925ECEE1B00E4520F /* NSStringExtension.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-func show<T>(val: inout T) {
+func showMems<T>(val: inout T) {
     print("-------------- \(type(of: val)) --------------")
     print("变量的地址:", Mems.ptr(ofVal: &val))
     print("变量的内存:", Mems.memStr(ofVal: &val))
@@ -16,7 +16,7 @@ func show<T>(val: inout T) {
     print("")
 }
 
-func show<T>(ref: T) {
+func showMems<T>(ref: T) {
     print("-------------- \(type(of: ref)) --------------")
     print("对象的地址:", Mems.ptr(ofRef: ref))
     print("对象的内存:", Mems.memStr(ofRef: ref))
@@ -27,16 +27,16 @@ func show<T>(ref: T) {
 /// 整型
 func showInt() {
     var int8: Int8 = 10
-    show(val: &int8)
+    showMems(val: &int8)
     
     var int16: Int16 = 10
-    show(val: &int16)
+    showMems(val: &int16)
     
     var int32: Int32 = 10
-    show(val: &int32)
+    showMems(val: &int32)
     
     var int64: Int64 = 10
-    show(val: &int64)
+    showMems(val: &int64)
 }
 
 /// 枚举
@@ -49,15 +49,15 @@ func showEnum() {
         case test5
     }
     var e = TestEnum.test1(1, 2, 3)
-    show(val: &e)
+    showMems(val: &e)
     e = .test2(4, 5)
-    show(val: &e)
+    showMems(val: &e)
     e = .test3(6)
-    show(val: &e)
+    showMems(val: &e)
     e = .test4(true)
-    show(val: &e)
+    showMems(val: &e)
     e = .test5
-    show(val: &e)
+    showMems(val: &e)
 }
 
 /// 结构体
@@ -69,7 +69,7 @@ func showStruct() {
         var day = 30
     }
     var s = Date()
-    show(val: &s)
+    showMems(val: &s)
 }
 
 // 类
@@ -80,15 +80,15 @@ func showClass() {
         var y = 22
     }
     var p = Point()
-    show(val: &p)
-    show(ref: p)
+    showMems(val: &p)
+    showMems(ref: p)
 }
 
 /// 数组
 func showArray() {
     var arr = [1, 2, 3, 4]
-    show(val: &arr)
-    show(ref: arr)
+    showMems(val: &arr)
+    showMems(ref: arr)
 }
 
 /// 字符串
@@ -96,19 +96,19 @@ func showString() {
     var str1 = "123456789"
     // tagPtr（tagger pointer）
     print(str1.mems.type())
-    show(val: &str1)
+    showMems(val: &str1)
 
     var str2 = "1234567812345678"
     // text（TEXT段，常量区）
     print(str2.mems.type())
-    show(val: &str2)
+    showMems(val: &str2)
 
     var str3 = "1234567812345678"
     str3.append("9")
     // heap（字符串存储在堆空间）
     print(str3.mems.type())
-    show(val: &str3)
-    show(ref: str3)
+    showMems(val: &str3)
+    showMems(ref: str3)
 }
 
 /// 字节格式

@@ -7,23 +7,29 @@
 
 import UIKit
 
-typealias cellConfigureClasure = (_ cell: Any,_ item: Any,_ indexPath: IndexPath)->Void
+typealias CellConfigureClasure<M> = (_ cell: UITableViewCell, _ item: M, _ indexPath: IndexPath)->Void
 
-open class MyDataSource: NSObject, UITableViewDataSource {
+open class MyDataSource<T>: NSObject, UITableViewDataSource {
     
-    var items: [[Any]] = []
+    var items: [[T]] = []
     var cellIdentifier: String?
-    var configureCellClasure: cellConfigureClasure?
+    var configureCellClasure: CellConfigureClasure<T>?
     
-    init(anItems: [[Any]],identifier: String,clasure: cellConfigureClasure?) {
+    init(anItems: inout [[T]],identifier: String,clasure: CellConfigureClasure<T>?) {
         items = anItems
+//        showMems(val: &anItems)
+//        showMems(val: &items)
         cellIdentifier = identifier
         if let clasure = clasure {
             configureCellClasure = clasure
         }
     }
     
-    func itemAtIndexPath(indexpath: Int) -> [Any] {
+    func addData(mItems: [T]) {
+        items.append(mItems)
+    }
+    
+    func itemAtIndexPath(indexpath: Int) -> [T] {
         return items[indexpath]
     }
     
@@ -39,7 +45,7 @@ open class MyDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier!, for: indexPath)
         let item = itemAtIndexPath(indexpath: indexPath.section)[indexPath.row]
         if let configureCellClasure = configureCellClasure {
-            configureCellClasure(cell,item,indexPath)
+            configureCellClasure(cell, item, indexPath)
         }
         return cell
     }
@@ -47,4 +53,5 @@ open class MyDataSource: NSObject, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
 }

@@ -32,6 +32,7 @@ class WATabBarController: UITabBarController {
         let selectedImage = UIImage(named: selectedImageName)
         let tabBarItem = UITabBarItem(title: title, image: image, selectedImage: selectedImage)
         vc.tabBarItem = tabBarItem
+        vc.title = title
         let nav = WANavigationController(rootViewController: vc)
         return nav
     }

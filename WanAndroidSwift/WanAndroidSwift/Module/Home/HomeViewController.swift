@@ -7,6 +7,7 @@
 
 import UIKit
 import FSPagerView
+import MJRefresh
 
 /// 首页控制器
 class HomeViewController: BaseViewController {
@@ -16,8 +17,19 @@ class HomeViewController: BaseViewController {
     let CELL_TOP_ARTICLE = "CELL_TOP_ARTICLE"
     
     // MARK: - Properties
+    private var currentPageIndex: String = "0"
     private var homeBannerModels: [HomeBannerModel]?
     private var homeTopArticleModels: [[HomeTopArticleModel]] = []
+//    private var homeArticleModels: [[HomeTopArticleModel]] {
+//        homeTopArticleModels
+//    }
+    
+    
+    // MARK: - lazy Data
+    private lazy var topArticleDataSource = MyDataSource(anItems: &homeTopArticleModels, identifier: CELL_TOP_ARTICLE, clasure: { (cell, item, indexPath) in
+        let cell = cell as! HomeTableViewCell
+        cell.homeTopArticleModel = item as? HomeTopArticleModel
+    })
     
     // MARK: - UIView
     private lazy var bannerView: FSPagerView = {
@@ -40,14 +52,12 @@ class HomeViewController: BaseViewController {
     
     private lazy var tableView: UITableView = {
         let table = UITableView(frame: CGRect.zero, style: .plain)
-        table.separatorStyle = .none
+//        table.separatorStyle = .none
         table.clearEstimatedHeight()
         table.clearContentInsetAdjustmentBehavior(vc: self)
-        table.dataSource = MyDataSource(anItems: homeTopArticleModels, identifier: CELL_TOP_ARTICLE, clasure: { (cell, item, indexPath) in
-            
-        })
+        table.dataSource = topArticleDataSource
         table.delegate = self
-        table.register(cellWithClass: UITableViewCell.self)
+        table.register(HomeTableViewCell.self, forCellReuseIdentifier: CELL_TOP_ARTICLE)
         return table
     }()
     
@@ -55,25 +65,38 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         requestData()
-        
+//        showMems(val: &homeTopArticleModels)
         setupUI()
     }
     /// 初始化UI
     private func setupUI() {
-        view.addSubview(bannerView)
-        view.addSubview(bannerDotView)
+        view.addSubview(tableView)
+        tableView.tableHeaderView = bannerView
+//        view.addSubview(bannerView)
+        bannerView.addSubview(bannerDotView)
+        addRefreshHeader()
+    }
+    
+    private func addRefreshHeader() {
+        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
+            self.requestData()
+        })
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        bannerView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.navigationController!.navigationBar.snp.bottom)
-            make.left.right.equalTo(self.view)
-            make.height.equalTo(200)
-        }
+        
+//        bannerView.snp.makeConstraints { (make) in
+//            make.top.equalTo(self.navigationController!.navigationBar.snp.bottom)
+//            make.left.right.equalTo(self.view)
+//            make.height.equalTo(200)
+//        }
         bannerDotView.snp.makeConstraints { (make) in
             make.left.right.bottom.equalTo(bannerView)
             make.height.equalTo(25)
+        }
+        tableView.snp.makeConstraints { (make) in
+            make.left.top.right.bottom.equalTo(view.safeAreaInsets)
         }
     }
     
@@ -111,7 +134,12 @@ extension HomeViewController: FSPagerViewDelegate {
 
 // MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        120
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }
 
 // MARK: - Data Handler
@@ -124,8 +152,24 @@ extension HomeViewController {
             self.bannerView.reloadData()
             self.bannerDotView.numberOfPages = result?.count ?? 0
         }
+        requestHomeTopArticle()
+        requestHomeArticleList(index: "0")
+    }
+    
+    private func requestHomeTopArticle() {
         HomeDataHandler.sharedHander.getHomeTopArticle { (result) in
-            
+            self.homeTopArticleModels.insert(result!, at: 0)
+            self.topArticleDataSource.items.insert(result!, at: 0)
+            self.tableView.reloadData()
+            self.tableView.mj_header?.endRefreshing()
+        }
+    }
+    
+    private func requestHomeArticleList(index: String) {
+        HomeDataHandler.sharedHander.getHomeArticleList(index: index) { (result) in
+            self.topArticleDataSource.addData(mItems: result?.datas ?? [])
+            self.tableView.reloadData()
+            self.tableView.mj_header?.endRefreshing()
         }
     }
 }

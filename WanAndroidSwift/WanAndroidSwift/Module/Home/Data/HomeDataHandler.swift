@@ -37,4 +37,15 @@ struct HomeDataHandler {
         };
 
     }
+    
+    func getHomeArticleList(index: String, success: @escaping SuccessClosure<HomeArticleListModel>) {
+        HUD.show()
+        NetworkManager.requestJSON(targetType: HomeApi.homeArticleList(index), HomeArticleListModel.self) { (result) in
+            HUD.hide()
+            success(result)
+        } failure: { (error) in
+            HUD.hide()
+        }
+
+    }
 }
