@@ -5,4 +5,15 @@
 //  Created by James on 2021/4/13.
 //
 
-import Foundation
+import WKWebViewJavascriptBridge
+
+class WebActionHandler {
+    
+    static let shared: WebActionHandler = WebActionHandler()
+    
+    private init() {}
+    
+    func handleData(with data: [String: Any]?, callback: WKWebViewJavascriptBridgeBase.Callback?) {
+        
+    }
+}

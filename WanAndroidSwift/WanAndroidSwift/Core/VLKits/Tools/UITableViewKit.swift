@@ -24,9 +24,18 @@ open class MyDataSource<T>: NSObject, UITableViewDataSource {
             configureCellClasure = clasure
         }
     }
-    
+        
     func addData(mItems: [T]) {
         items.append(mItems)
+    }
+    
+    func joinData(mItems: [T]) {
+        guard var arr = items.last else { return }
+        arr += mItems
+    }
+    
+    func clearData() {
+        items.removeAll()
     }
     
     func itemAtIndexPath(indexpath: Int) -> [T] {

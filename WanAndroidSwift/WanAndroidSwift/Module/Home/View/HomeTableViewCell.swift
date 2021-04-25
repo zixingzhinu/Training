@@ -28,14 +28,15 @@ class HomeTableViewCell: UITableViewCell {
         contentView.addSubview(authorLabel)
         contentView.addSubview(timeLabel)
         contentView.addSubview(chapterLabel)
+        layout()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    private func layout() {
         tagLabel.snp.makeConstraints { (make) in
             make.left.equalTo(contentView).offset(15)
             make.top.equalTo(contentView).offset(10)
-            
+//            make.width.equalTo(80)
+//            make.height.equalTo(25)
         }
         titleLabel.snp.makeConstraints { (make) in
             make.left.equalTo(contentView).offset(15)
@@ -44,7 +45,7 @@ class HomeTableViewCell: UITableViewCell {
         }
         authorLabel.snp.makeConstraints { (make) in
             make.left.equalTo(tagLabel.snp.right).offset(10)
-            make.top.equalTo(tagLabel).offset(0)
+            make.centerY.equalTo(tagLabel).offset(0)
         }
         chapterLabel.snp.makeConstraints { (make) in
             make.left.equalTo(titleLabel).offset(0)
@@ -56,6 +57,15 @@ class HomeTableViewCell: UITableViewCell {
         }
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+//        tagLabel.sizeToFit()
+//        tagLabel.frame.size.width += 10
+//        printDebug("1距离是：\(tagLabel.frame)")
+//        printDebug("2距离是：\(tagLabel.frame.inset(by: UIEdgeInsets(top: 10, left: -10, bottom: 5, right: -5)))")
+//        printDebug("3距离是：\(tagLabel.frame.insetBy(dx: 10, dy: -10))")
+    }
+    
     // MARK: - UI
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -64,12 +74,14 @@ class HomeTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var tagLabel: UILabel = {
-        let label = UILabel()
+    private lazy var tagLabel: MyUILabel = {
+        let label = MyUILabel()
         label.layer.cornerRadius = 5
         label.layer.borderWidth = 1
         label.layer.borderColor = UIColor.systemRed.cgColor
         label.textColor = UIColor.systemRed
+        label.textAlignment = .center
+        label.textInsets = UIEdgeInsets(top: 2, left: 5, bottom: 2, right: 5)
         return label
     }()
     
@@ -98,18 +110,20 @@ class HomeTableViewCell: UITableViewCell {
             if homeTopArticleModel.tags.count > 0 {
                 tagLabel.text = homeTopArticleModel.tags[0].name
                 tagLabel.isHidden = false
-                authorLabel.snp.updateConstraints { (make) in
+                authorLabel.snp.remakeConstraints { (make) in
                     make.left.equalTo(tagLabel.snp.right).offset(5)
+                    make.centerY.equalTo(tagLabel).offset(0)
                 }
             }
             else {
                 tagLabel.text = ""
                 tagLabel.isHidden = true
-                authorLabel.snp.updateConstraints { (make) in
-                    make.left.equalTo(tagLabel.snp.right).offset(0)
+                authorLabel.snp.remakeConstraints { (make) in
+                    make.left.equalTo(titleLabel).offset(0)
+                    make.top.equalToSuperview().offset(10)
                 }
             }
-            authorLabel.text = homeTopArticleModel.author
+            authorLabel.text = homeTopArticleModel.author.count > 0 ? homeTopArticleModel.author : homeTopArticleModel.shareUser
             chapterLabel.text = homeTopArticleModel.superChapterName + "·" + homeTopArticleModel.chapterName
             timeLabel.text = homeTopArticleModel.niceDate
         }

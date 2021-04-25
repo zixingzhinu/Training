@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.4.1)
+  - Alamofire (5.4.2)
   - DeviceKit (4.3.0)
   - DynamicColor (5.0.1)
   - FDFullscreenPopGesture (1.1)
@@ -49,6 +49,9 @@ PODS:
   - SwiftyJSON (5.0.1)
   - UIColor_Hex_Swift (5.1.0)
   - WKWebViewJavascriptBridge (1.2.1)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - DeviceKit (~> 4.0)
@@ -69,6 +72,7 @@ DEPENDENCIES:
   - SwiftyJSON
   - UIColor_Hex_Swift (~> 5.1.0)
   - WKWebViewJavascriptBridge (~> 1.2.0)
+  - YYKit
 
 SPEC REPOS:
   trunk:
@@ -93,9 +97,10 @@ SPEC REPOS:
     - SwiftyJSON
     - UIColor_Hex_Swift
     - WKWebViewJavascriptBridge
+    - YYKit
 
 SPEC CHECKSUMS:
-  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   DeviceKit: 7decde449c308ac7e816e2184ded1c7c596fb885
   DynamicColor: d049834ef86d8ecf150b0ca1ebe54ee733a0ec22
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
@@ -116,7 +121,8 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
   WKWebViewJavascriptBridge: 07ad0cab27cd61ccdb90b5deb223f6df3a03c3d7
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 0c6110584abf54fd7d7067f7d9ed175850d2c250
+PODFILE CHECKSUM: 53b29ca773e9239cbeac9ac349faa817d55dc5f7
 
 COCOAPODS: 1.10.1

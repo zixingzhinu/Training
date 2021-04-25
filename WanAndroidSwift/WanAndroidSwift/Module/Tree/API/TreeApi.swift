@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+enum TreeApi {
+    // 体系数据
+    case treeCategory
+    // 知识体系下的文章
+    case treeCategoryArticle(String, String)
+}
+
+extension TreeApi: VLTargetType {
+    
+    var parameters: [String : Any]? {
+        return nil
+    }
+    
+    var path: String {
+        return ""
+    }
+}

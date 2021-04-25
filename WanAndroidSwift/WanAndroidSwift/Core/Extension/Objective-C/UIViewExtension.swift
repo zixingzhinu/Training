@@ -33,7 +33,7 @@ extension UIView {
             return frame.size.width
         }
         set {
-            frame = CGRect(x: frame.origin.x, y: newValue, width: frame.origin.x + newValue, height: frame.height)
+            frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.origin.x + newValue, height: frame.height)
         }
     }
     

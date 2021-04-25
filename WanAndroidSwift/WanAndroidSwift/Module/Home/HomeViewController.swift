@@ -26,9 +26,9 @@ class HomeViewController: BaseViewController {
     
     
     // MARK: - lazy Data
-    private lazy var topArticleDataSource = MyDataSource(anItems: &homeTopArticleModels, identifier: CELL_TOP_ARTICLE, clasure: { (cell, item, indexPath) in
+    private lazy var topArticleDataSource = MyDataSource<HomeTopArticleModel>(anItems: &homeTopArticleModels, identifier: CELL_TOP_ARTICLE, clasure: { (cell, item, indexPath) in
         let cell = cell as! HomeTableViewCell
-        cell.homeTopArticleModel = item as? HomeTopArticleModel
+        cell.homeTopArticleModel = item
     })
     
     // MARK: - UIView
@@ -75,11 +75,20 @@ class HomeViewController: BaseViewController {
 //        view.addSubview(bannerView)
         bannerView.addSubview(bannerDotView)
         addRefreshHeader()
+        addRefreshFooter()
     }
     
     private func addRefreshHeader() {
         tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
+            self.currentPageIndex = "0"
             self.requestData()
+        })
+    }
+    
+    private func addRefreshFooter() {
+        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: {
+            self.currentPageIndex = "\(self.currentPageIndex.int! + 1)"
+            self.requestHomeArticleList(index: self.currentPageIndex)
         })
     }
     
@@ -91,8 +100,7 @@ class HomeViewController: BaseViewController {
 //            make.left.right.equalTo(self.view)
 //            make.height.equalTo(200)
 //        }
-        bannerDotView.snp.makeConstraints { (make) in
-            make.left.right.bottom.equalTo(bannerView)
+        bannerDotView.snp.makeConstraints { (make) in            make.left.right.bottom.equalTo(bannerView)
             make.height.equalTo(25)
         }
         tableView.snp.makeConstraints { (make) in
@@ -102,7 +110,7 @@ class HomeViewController: BaseViewController {
     
 }
 
-// MARK: -
+// MARK: - FSPagerViewDataSource
 extension HomeViewController: FSPagerViewDataSource {
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         return homeBannerModels?.count ?? 0
@@ -120,7 +128,8 @@ extension HomeViewController: FSPagerViewDataSource {
 extension HomeViewController: FSPagerViewDelegate {
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         pagerView.deselectItem(at: index, animated: false)
-        
+        let webVc = VLWebViewController(url: homeBannerModels?[index].url ?? "", title: "")
+        self.navigationController?.pushViewController(webVc, animated: true)
     }
     
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
@@ -138,7 +147,9 @@ extension HomeViewController: UITableViewDelegate {
         120
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: false)
+        let webVc = VLWebViewController(url: topArticleDataSource.items[indexPath.section][indexPath.row].link, title: "")
+        self.navigationController?.pushViewController(webVc, animated: true)
     }
 }
 
@@ -147,20 +158,31 @@ extension HomeViewController {
     
     /// 请求数据
     private func requestData() {
+        self.topArticleDataSource.clearData()
         HomeDataHandler.sharedHander.getHomeBanner { (result) in
             self.homeBannerModels = result
             self.bannerView.reloadData()
             self.bannerDotView.numberOfPages = result?.count ?? 0
+        } failure: { (error) in
+            self.tableView.mj_header?.endRefreshing()
         }
+
         requestHomeTopArticle()
         requestHomeArticleList(index: "0")
     }
     
     private func requestHomeTopArticle() {
         HomeDataHandler.sharedHander.getHomeTopArticle { (result) in
-            self.homeTopArticleModels.insert(result!, at: 0)
+//            self.homeTopArticleModels.insert(result!, at: 0)
+            _ = result!.map { (homeTopArticleModel: HomeTopArticleModel) -> HomeTopArticleModel in
+                homeTopArticleModel.tags.insert(Tag(fromDictionary: ["name": "置顶", "url": "/"]), at: 0)
+                return homeTopArticleModel
+            }
+            
             self.topArticleDataSource.items.insert(result!, at: 0)
             self.tableView.reloadData()
+//            self.tableView.mj_header?.endRefreshing()
+        } failure: { (error) in
             self.tableView.mj_header?.endRefreshing()
         }
     }
@@ -170,6 +192,9 @@ extension HomeViewController {
             self.topArticleDataSource.addData(mItems: result?.datas ?? [])
             self.tableView.reloadData()
             self.tableView.mj_header?.endRefreshing()
+        } failure: { (error) in
+            self.tableView.mj_header?.endRefreshing()
+            self.tableView.mj_footer?.endRefreshing()
         }
     }
 }
