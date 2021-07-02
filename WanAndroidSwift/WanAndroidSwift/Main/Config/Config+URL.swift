@@ -11,6 +11,8 @@ extension Config {
     
     struct WanAndroidApi {
         static let baseURL = "https://www.wanandroid.com/"
+        
+        // MARK: - 首页数据
         static let home_banner = "banner/json"
         /// 首页文章列表，序号从0开始拼接
 //        static let home_article_list = "article/list/0/json"
@@ -19,5 +21,11 @@ extension Config {
         }
         /// 置顶文章
         static let home_article_top = "article/top/json"
+        
+        // MARK: - 体系数据
+        static let tree_category = "tree/json"
+        static func tree_article_list(pageIndex: String, cid: String) -> String {
+            "article/list/\(pageIndex)/json?cid=\(cid)"
+        }
     }
 }

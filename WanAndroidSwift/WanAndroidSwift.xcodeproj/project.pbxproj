@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A1790EA25FA041100B1C728 /* PKHUDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1790E925FA041100B1C728 /* PKHUDExtension.swift */; };
+		1A5808A42636A8CD00277E1F /* TreeDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5808A32636A8CD00277E1F /* TreeDataHandler.swift */; };
 		1A6396C325EF3B2500DF5B37 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6396C225EF3B2500DF5B37 /* Config.swift */; };
 		1A6396CB25EF3B6C00DF5B37 /* Config+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6396CA25EF3B6C00DF5B37 /* Config+URL.swift */; };
 		1A6396D125EF6D2E00DF5B37 /* HomeDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6396D025EF6D2E00DF5B37 /* HomeDataHandler.swift */; };
@@ -107,6 +108,7 @@
 		18AAD41F11AEF1FEACB01EA7 /* Pods-WanAndroidSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwift.debug.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwift/Pods-WanAndroidSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		1A15086CA3922EFC38211F6D /* Pods-WanAndroidSwift-WanAndroidSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidSwift-WanAndroidSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-WanAndroidSwift-WanAndroidSwiftUITests/Pods-WanAndroidSwift-WanAndroidSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1A1790E925FA041100B1C728 /* PKHUDExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKHUDExtension.swift; sourceTree = "<group>"; };
+		1A5808A32636A8CD00277E1F /* TreeDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDataHandler.swift; sourceTree = "<group>"; };
 		1A6396C225EF3B2500DF5B37 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1A6396CA25EF3B6C00DF5B37 /* Config+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+URL.swift"; sourceTree = "<group>"; };
 		1A6396D025EF6D2E00DF5B37 /* HomeDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataHandler.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		1A8473A0263126FC00B8AB6D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1A5808A32636A8CD00277E1F /* TreeDataHandler.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -862,6 +865,7 @@
 				1AE657F225ECEED900E4520F /* RegexKit.swift in Sources */,
 				1AE657AD25ECED7100E4520F /* AppUpdateTargetType.swift in Sources */,
 				1AE657B025ECED7100E4520F /* Observable+Extension.swift in Sources */,
+				1A5808A42636A8CD00277E1F /* TreeDataHandler.swift in Sources */,
 				1AD921D1261EB48E0017FEA1 /* VLWebView.swift in Sources */,
 				1A6396D725EF6E6900DF5B37 /* HomeApi.swift in Sources */,
 				1AE6582325ECF6BA00E4520F /* MineViewController.swift in Sources */,

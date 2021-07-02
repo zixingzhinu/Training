@@ -21,6 +21,11 @@ extension TreeApi: VLTargetType {
     }
     
     var path: String {
-        return ""
+        switch self {
+        case .treeCategory:
+            return ConfApi.tree_category
+        case let .treeCategoryArticle(pageIndex, cid):
+            return ConfApi.tree_article_list(pageIndex: pageIndex, cid: cid)
+        }
     }
 }
